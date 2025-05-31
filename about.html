@@ -121,7 +121,7 @@
       flex: 1 1 calc(45% - 10px);
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
  gap: 1rem;
        outline: none !important;
       border: none !important;
@@ -147,9 +147,110 @@
       .section-container {
         flex-direction: column;
       }
-
+ .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
       .card {
         flex: 1 1 100%;
+      }
+    }
+  </style>
+
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .about-section {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .about-section p.subtitle {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .about-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .column {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      color: #4CAF50;
+      margin-top: 4px;
+    }
+
+    .feature-text h4 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .feature-text p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .center-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .center-image img {
+      max-width: 100%;
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        align-items: center;
+      }
+
+      .feature-item {
+        justify-content: center;
+      }
+
+      .feature-text {
+        text-align: center;
       }
     }
   </style>
@@ -437,7 +538,7 @@
   <!-- Left Image -->
   <div class="left-image">
     <img src="/assets/img/about/04.png" alt="Left Side Image">
-  </div>
+</div>
 
   <!-- Right Content -->
   <div class="right-content">
@@ -473,7 +574,7 @@
         <h4>Secure Systems</h4>
         <p>We prioritize safety in all transactions.</p>
         </div>
-      </div>
+</div>
 
       <div class="card">
         <div class="card-icon">🎯</div>
@@ -490,10 +591,63 @@
         <p>Round-the-clock customer support service.</p>
       </div>
     </div>
+    
   </div>
 </section>
 
 <!--  -->
+
+<!-- About-us sec-3 -->
+ <section class="about-section">
+  <h2>OUR COMPANY VALUES AND</h2>
+  <p class="subtitle">VISION that drive us toward excellence and innovation.</p>
+
+  <div class="about-content">
+    <!-- Column 1 -->
+    <div class="column">
+      <div class="feature-item">
+        <div class="feature-icon">🧩</div>
+        <div class="feature-text">
+          <h4>Creativity</h4>
+          <p>We bring fresh ideas to every project we take on.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-text">
+          <h4>Security</h4>
+          <p>We ensure your data and systems are safe with us.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2 - Center Image -->
+    <div class="column center-image">
+      <img src="/assets/img/about/04.png" alt="Team or Office">
+    </div>
+
+    <!-- Column 3 -->
+    <div class="column">
+      <div class="feature-item">
+        <div class="feature-icon">⚙️</div>
+        <div class="feature-text">
+          <h4>Efficiency</h4>
+          <p>We work smart to deliver fast and effective solutions.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">📈</div>
+        <div class="feature-text">
+          <h4>Growth</h4>
+          <p>Your success is our success, and we grow together.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!--  -->
     <!-- Aboutv1 Section Start -->
     <section class="about-sectionv1 space-top overflow-hidden space-bottom">
         <div class="container">
