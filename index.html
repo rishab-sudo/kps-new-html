@@ -32,7 +32,76 @@
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 50px auto;
+      overflow: hidden;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      flex: 0 0 200px;
+      height: 400px;
+      margin-right: 20px; /* Increased gap */
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .slider-buttons button {
+      pointer-events: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 900px) {
+      .slide {
+        flex: 0 0 45%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .slide {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
 <body>
 
     <!-- Preloader Start -->
@@ -574,6 +643,31 @@
         </div>
         <img src="assets/img/about/two-child.png" alt="img" class="program-child">
     </section>
+
+
+    <!-- toppers sec -->
+      <div class="slider-container">
+     <div class="section-title text-center mb-60">
+                        <span class="sub-title wow fadeInUp p4-clr">
+                           
+                        </span>
+                        <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
+                      Our School Toppers
+                        </h3>
+                    </div>
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 4"></div>
+      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 5"></div>
+      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 6"></div>
+    </div>
+    <div class="slider-buttons">
+      <button onclick="moveSlide(-1)">&#10094;</button>
+      <button onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
 
     <!-- Protfolio Section Start -->
     <section class="protfolio-sectionv1 overflow-hidden space-bottom position-relative">
@@ -1816,6 +1910,32 @@
     <script src="assets/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+
+    <!-- toppers - script -->
+  <script>
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slide');
+    const slideWidth = slides[0].offsetWidth + 20; // includes margin-right
+    let index = 0;
+    const visibleSlides = 4;
+
+    function moveSlide(direction) {
+      index += direction;
+
+      if (index < 0) {
+        index = slides.length - visibleSlides;
+      } else if (index > slides.length - visibleSlides) {
+        index = 0;
+      }
+
+      track.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    // Auto slide every 3 seconds
+    setInterval(() => {
+      moveSlide(1);
+    }, 3000);
+  </script>
 </body>
 
 </html>
