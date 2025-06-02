@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fancy Responsive Table</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7f8;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .table-container {
+      width: 90%;
+      margin: 0 auto;
+      overflow-x: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    thead {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    tbody tr:hover {
+      background: #f1f5ff;
+      transition: background 0.3s ease;
+    }
+
+    th {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      th, td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      table {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Our Faculty Members</h2>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be inserted by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const tbody = document.querySelector("tbody");
+    tbody.innerHTML = Array.from({ length: 30 }, (_, i) => `
+      <tr>
+        <td>${i + 1}</td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john${i + 1}@mail.com</td>
+        <td>${i % 2 === 0 ? 'Active' : 'Pending'}</td>
+      </tr>
+    `).join('');
+  </script>
+
+</body>
+</html>
