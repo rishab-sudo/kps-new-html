@@ -33,64 +33,66 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <style>
-  .student-slider-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f2f2f2;
-    padding: 40px 0;
-    overflow: hidden;
-  }
-
-  .student-slider-container {
-    width: 90%;
-    max-width: 900px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .student-slider-track {
-    display: flex;
-    width: max-content;
-    animation: student-infinite-scroll 30s linear infinite;
-  }
-
-  .student-slider {
-    display: flex;
-    gap: 16px;
-  }
-
-  .student-slider img {
-    height: 320px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-
-  @keyframes student-infinite-scroll {
-    0% {
-      transform: translateX(0%);
+    .student-slider-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f2f2f2;
+        padding: 40px 0;
+        overflow: hidden;
     }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
 
-  @media (max-width: 768px) {
+    .student-slider-container {
+        width: 90%;
+        max-width: 900px;
+        overflow: hidden;
+        position: relative;
+    }
+
     .student-slider-track {
-      animation-duration: 15s;
+        display: flex;
+        width: max-content;
+        animation: student-infinite-scroll 30s linear infinite;
     }
 
     .student-slider {
-      gap: 8px;
+        display: flex;
+        gap: 16px;
     }
 
     .student-slider img {
-      width: 90vw;
+        height: 320px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
     }
-  }
+
+    @keyframes student-infinite-scroll {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .student-slider-track {
+            animation-duration: 15s;
+        }
+
+        .student-slider {
+            gap: 8px;
+        }
+
+        .student-slider img {
+            width: 90vw;
+        }
+    }
 </style>
+
 <body>
 
     <!-- Preloader Start -->
@@ -236,7 +238,7 @@
                                                 Home
                                                 <!-- <i class="fas fa-angle-down"></i> -->
                                             </a>
-                                         
+
                                         </li>
                                         <li>
                                             <a href="about.html">About Us</a>
@@ -249,8 +251,8 @@
                                             <ul class="submenu">
                                                 <li><a href="academics.html">Academics</a></li>
                                                 <li><a href="curriculum.html">Curriculum</a></li>
-                                                 <li><a href="service-details.html">Sports & Activities</a></li>
-                                                  <li><a href="service-details.html">Faculty</a></li>
+                                                <li><a href="service-details.html">Sports & Activities</a></li>
+                                                <li><a href="service-details.html">Faculty</a></li>
                                             </ul>
                                         </li>
 
@@ -262,9 +264,9 @@
                                             <ul class="submenu">
                                                 <li><a href="blog.html"> Admission Procedure</a></li>
                                                 <li><a href="blog-details.html"> Application Form</a></li>
-                                                   <li><a href="blog-details.html">  Fee Rules & Regulations</a></li>
-                                                      <li><a href="blog-details.html">   Withdrawal Form</a></li>
-                                                         <li><a href="blog-details.html"> School Calendar </a></li>
+                                                <li><a href="blog-details.html"> Fee Rules & Regulations</a></li>
+                                                <li><a href="blog-details.html"> Withdrawal Form</a></li>
+                                                <li><a href="blog-details.html"> School Calendar </a></li>
                                             </ul>
                                         </li>
                                         <!-- <li class="has-dropdown">
@@ -282,16 +284,16 @@
                                                 <li><a href="contact.html">Contact</a></li>
                                             </ul>
                                         </li> -->
-                                         <li>
+                                        <li>
                                             <a href="contact.html">Events Gallery </a>
                                         </li>
 
                                         <li>
                                             <a href="contact.html">Downloads & More</a>
                                         </li>
-                                     
-                                    
-                                 
+
+
+
                                 </nav>
                             </div>
                         </div>
@@ -301,12 +303,12 @@
                         <div class="header-button d-sm-block d-none">
                             <a href="contact.html" class="theme-btn p5-bg">
                                 <span>
-                                   Contact Us
+                                    Contact Us
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </span>
                             </a>
                         </div>
-                  
+
                         <div class="header__hamburger d-xl-none my-auto">
                             <div class="sidebar__toggle">
                                 <i class="fas fa-bars"></i>
@@ -344,18 +346,19 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="banner-v1-content text-center">
-                            <h1 class="wow fadeInDown" data-wow-delay=".6s"> 
-                                <span class="title-explore position-relative wow fadeInRight d-inline-block" data-wow-delay=".4s">
+                            <h1 class="wow fadeInDown" data-wow-delay=".6s">
+                                <span class="title-explore position-relative wow fadeInRight d-inline-block"
+                                    data-wow-delay=".4s">
                                     <img src="assets/img/abanner/text-layer.png" alt="img" class="text-layer">
-                               Inspiring Excellence, 
+                                    Inspiring Excellence,
                                 </span>
-                              Shaping
+                                Shaping
                                 <span class="text-sount">
-                             Futures
+                                    Futures
                                 </span>
                             </h1>
                             <p class="wow fadeInUp" data-wow-delay=".5s">
-                          We ignite curiosity, build confidence, and craft paths toward lifelong success.
+                                We ignite curiosity, build confidence, and craft paths toward lifelong success.
 
                             </p>
                             <a href="contact.html" class="theme-btn p4-bg">
@@ -392,14 +395,16 @@
                                 Number Talks
                             </span>
                             <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                               Expert Teaching. Lifelong Impact. 
-                                <br/>    <br/>
-                              <p class="wow fadeInUp" data-wow-delay=".4s" style="line-height: normal;">Invest in education. Invest in a brighter tomorrow.</p>
+                                Expert Teaching. Lifelong Impact.
+                                <br /> <br />
+                                <p class="wow fadeInUp" data-wow-delay=".4s" style="line-height: normal;">Invest in
+                                    education. Invest in a brighter tomorrow.</p>
 
                             </h3>
                             <p class="wow fadeInUp" data-wow-delay=".4s">
-                            At Krishna Public School, we go beyond books. Our expert educators nurture curiosity, inspire excellence, 
-                            and mentor every child toward a purposeful future—both in school and beyond.
+                                At Krishna Public School, we go beyond books. Our expert educators nurture curiosity,
+                                inspire excellence,
+                                and mentor every child toward a purposeful future—both in school and beyond.
 
                             </p>
                             <a href="contact.html" class="theme-btn gra-border2">
@@ -431,7 +436,7 @@
                                 <h3>
                                     <span class="count">3</span>K
                                 </h3>
-                                <p>  Expert Mentors</p>
+                                <p> Expert Mentors</p>
                             </div>
                         </div>
                     </div>
@@ -485,7 +490,7 @@
                                     Academics
                                 </h4>
                                 <p class="pra">
-                                  Excellence in Education
+                                    Excellence in Education
                                 </p>
                             </div>
                             <div class="academy-box2 gra-border round10 wow fadeInUp" data-wow-delay="1600">
@@ -506,11 +511,13 @@
                                 About Us
                             </span>
                             <h3 class="m-title wow fadeInUp black mb-sm-3 mb-2" data-wow-delay=".3s">
-                            Nurturing Every Child’s Potential with Purpose, Passion, and Pride
+                                Nurturing Every Child’s Potential with Purpose, Passion, and Pride
                             </h3>
                             <p class="mb-24 wow fadeInUp" data-wow-delay=".4s">
-                         We shape confident, compassionate learners through academic excellence, cultural pride, and holistic
-                          growth—empowering every child to thrive intellectually, emotionally, and morally in a dynamic, evolving world.
+                                We shape confident, compassionate learners through academic excellence, cultural pride,
+                                and holistic
+                                growth—empowering every child to thrive intellectually, emotionally, and morally in a
+                                dynamic, evolving world.
                             </p>
                             <!-- <a href="about.html" class="theme-btn gra-border2">
                                 <span class="black fw-medium">
@@ -534,7 +541,7 @@
                             Educational Programs
                         </span>
                         <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                         MS Dhoni Cricket Academy: Building Champions for Tomorrow
+                            MS Dhoni Cricket Academy: Building Champions for Tomorrow
                         </h3>
                     </div>
                 </div>
@@ -550,8 +557,8 @@
                                 <a href="service-details.html">Elite Cricket Training Program</a>
                             </h4>
                             <p>
-                            Students receive top-tier coaching through the MS Dhoni Cricket Academy, 
-                            building skills, discipline, and confidence alongside strong academics.
+                                Students receive top-tier coaching through the MS Dhoni Cricket Academy,
+                                building skills, discipline, and confidence alongside strong academics.
                             </p>
                             <!-- <a href="service-details.html" class="readmore d-flex align-items-center gap-2">
                                 Read More
@@ -572,8 +579,8 @@
                                 <a href="service-details.html">Special Education</a>
                             </h4>
                             <p>
-                           Inclusive classrooms and personalized support ensure every child receives the 
-                           attention and care needed to learn and grow at their own pace.
+                                Inclusive classrooms and personalized support ensure every child receives the
+                                attention and care needed to learn and grow at their own pace.
                             </p>
                             <!-- <a href="service-details.html" class="readmore d-flex align-items-center gap-2">
                                 Read More
@@ -594,8 +601,9 @@
                                 <a href="service-details.html">Honors Classes</a>
                             </h4>
                             <p>
-                            Advanced learners thrive in our Honors Classes, benefitting from enriched curriculum and mentorship
-                             that foster critical thinking and academic excellence.
+                                Advanced learners thrive in our Honors Classes, benefitting from enriched curriculum and
+                                mentorship
+                                that foster critical thinking and academic excellence.
                             </p>
                             <!-- <a href="service-details.html" class="readmore d-flex align-items-center gap-2">
                                 Read More
@@ -616,8 +624,8 @@
                                 <a href="service-details.html">Traditional Academies</a>
                             </h4>
                             <p>
-                          We blend modern education with traditional values, promoting structured academics, 
-                          discipline, and cultural growth for well-rounded development.
+                                We blend modern education with traditional values, promoting structured academics,
+                                discipline, and cultural growth for well-rounded development.
                             </p>
                             <!-- <a href="service-details.html" class="readmore d-flex align-items-center gap-2">
                                 Read More
@@ -632,17 +640,17 @@
         </div>
         <img src="assets/img/about/two-child.png" alt="img" class="program-child">
     </section>
-   <!-- Protfolio Section Start -->
+    <!-- Protfolio Section Start -->
     <section class="protfolio-sectionv1 overflow-hidden space-bottom position-relative">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title text-center mb-40">
                         <span class="sub-title wow fadeInUp p5-clr">
-                            Latest Portfolio
+                            Lead Ahead
                         </span>
                         <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                            Exploring Minds Elementary School Education the only school
+                            Krishna Public School: Nurturing Tomorrow's Leaders
                         </h3>
                     </div>
                 </div>
@@ -654,13 +662,13 @@
                             <button class="tablink">Education</button>
                         </li> -->
                         <li class="nav-links">
-                            <button class="tablink">School</button>
+                            <button class="tablink">Academics</button>
                         </li>
                         <li class="nav-links">
-                            <button class="tablink">Learn</button>
+                            <button class="tablink">Sports</button>
                         </li>
                         <li class="nav-links">
-                            <button class="tablink">Child</button>
+                            <button class="tablink">Arts & Culture</button>
                         </li>
                         <!-- <li class="nav-links">
                             <button class="tablink">Coaching</button>
@@ -677,11 +685,11 @@
                                         <div class="box">
                                             <h4>
                                                 <a href="portfolio.html" class="white">
-                                                    Exploring Minds Elementary Best School
+                                                    Inspiring minds to excel.
                                                 </a>
                                             </h4>
                                             <p class="white">
-                                                Dreamland Elementary
+                                                <!-- Dreamland Elementary -->
                                             </p>
                                         </div>
                                         <a href="portfolio.html" class="prot-arrow">
@@ -699,11 +707,11 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Inspiring minds to excel.
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -719,11 +727,11 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Inspiring minds to excel.
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -739,11 +747,11 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Inspiring minds to excel.
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -759,11 +767,11 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Inspiring minds to excel.
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -787,11 +795,12 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Champions on and off the field.
+
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -807,11 +816,12 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Champions on and off the field.
+
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -827,11 +837,12 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Champions on and off the field.
+
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -847,11 +858,12 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Champions on and off the field.
+
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -875,11 +887,12 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Unleashing creative potential.
+
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -895,11 +908,11 @@
                                                 <div class="box">
                                                     <h4>
                                                         <a href="portfolio.html" class="white">
-                                                            Exploring Minds Elementary Best School
+                                                            Unleashing creative potential.
                                                         </a>
                                                     </h4>
                                                     <p class="white">
-                                                        Dreamland Elementary
+                                                        <!-- Dreamland Elementary -->
                                                     </p>
                                                 </div>
                                                 <a href="portfolio.html" class="prot-arrow">
@@ -1074,28 +1087,28 @@
     </section>
 
     <!-- toppers sec -->
-<section class="student-slider-section">
-  <div class="student-slider-container">
-    <div class="student-slider-track">
-      <div class="student-slider">
-        <img src="./assets/img/new-img/nora.jpg" alt="1" />
-        <img src="./assets/img/new-img/nora.jpg" alt="2" />
-        <img src="./assets/img/new-img/nora.jpg" alt="3" />
-        <img src="./assets/img/new-img/nora.jpg" alt="4" />
-        <img src="./assets/img/new-img/nora.jpg" alt="5" />
-        <img src="./assets/img/new-img/nora.jpg" alt="6" />
+    <section class="student-slider-section">
+        <div class="student-slider-container">
+            <div class="student-slider-track">
+                <div class="student-slider">
+                    <img src="./assets/img/new-img/nora.jpg" alt="1" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="2" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="3" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="4" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="5" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="6" />
 
-        <!-- Duplicated for infinite loop -->
-        <img src="./assets/img/new-img/nora.jpg" alt="1" />
-        <img src="./assets/img/new-img/nora.jpg" alt="2" />
-        <img src="./assets/img/new-img/nora.jpg" alt="3" />
-        <img src="./assets/img/new-img/nora.jpg" alt="4" />
-        <img src="./assets/img/new-img/nora.jpg" alt="5" />
-        <img src="./assets/img/new-img/nora.jpg"" alt="6" />
-      </div>
-    </div>
-  </div>
-</section>
+                    <!-- Duplicated for infinite loop -->
+                    <img src="./assets/img/new-img/nora.jpg" alt="1" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="2" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="3" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="4" />
+                    <img src="./assets/img/new-img/nora.jpg" alt="5" />
+                    <img src="./assets/img/new-img/nora.jpg"" alt=" 6" />
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Protfolio Section Start -->
@@ -1679,10 +1692,10 @@
                     <div class="faq-content">
                         <div class="section-title mb-40">
                             <span class="sub-title wow fadeInUp p5-clr">
-                                Some Faq
+                                FAQs
                             </span>
                             <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                                Empowering Children Through Education Playful Mind
+                                Guiding Your Child's Journey
                             </h3>
                         </div>
                         <div class="tab-faq faq">
@@ -1692,16 +1705,15 @@
                                         <button
                                             class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
                                             type="button">
-                                            What are the prerequisites for this course?
+                                            What is the admission process at Krishna Public School?
                                         </button>
                                     </h5>
                                     <div class="content-area">
                                         <div class="content-body">
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                read content of a page when looking at its layout.
-                                                Many desktop publish packages and web page editors now use Loremdefault
-                                                model
+                                                Our process involves an application, an interaction/assessment for the
+                                                child,
+                                                and a meeting with administration. Details are on our website.
                                             </p>
                                         </div>
                                     </div>
@@ -1711,16 +1723,15 @@
                                         <button
                                             class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
                                             type="button">
-                                            What subjects will I learn in school?
+                                            What curriculum does Krishna Public School follow?
                                         </button>
                                     </h5>
                                     <div class="content-area">
                                         <div class="content-body">
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                read content of a page when looking at its layout.
-                                                Many desktop publish packages and web page editors now use Loremdefault
-                                                model
+                                                We follow the CBSE curriculum, offering a comprehensive program focused
+                                                on critical thinking
+                                                and holistic development.
                                             </p>
                                         </div>
                                     </div>
@@ -1730,16 +1741,15 @@
                                         <button
                                             class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
                                             type="button">
-                                            How long is a school day?
+                                            What extracurricular activities are available?
                                         </button>
                                     </h5>
                                     <div class="content-area">
                                         <div class="content-body">
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                read content of a page when looking at its layout.
-                                                Many desktop publish packages and web page editors now use Loremdefault
-                                                model
+                                                We offer a wide range of sports such as Cricket, Football, basketball
+                                                and
+                                                performing arts such as dance, music.
                                             </p>
                                         </div>
                                     </div>
@@ -1749,16 +1759,15 @@
                                         <button
                                             class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
                                             type="button">
-                                            What are the prerequisites course?
+                                            Do you provide transportation services?
                                         </button>
                                     </h5>
                                     <div class="content-area">
                                         <div class="content-body">
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                read content of a page when looking at its layout.
-                                                Many desktop publish packages and web page editors now use Loremdefault
-                                                model
+                                                Yes, we offer safe and reliable transportation across various routes
+                                                within Bareilly.
+                                                Please inquire for details.
                                             </p>
                                         </div>
                                     </div>
@@ -1996,17 +2005,17 @@
                 <div class="col-lg-4 col-md-5">
                     <div class="section-title">
                         <span class="sub-title wow fadeInUp p5-clr">
-                            Clients Testimonial
+                            Parents Testimonial
                         </span>
                         <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                            Unlocking the Power of Wonderworks Child
+                            Parents Share Their Children's Growth
                         </h3>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    Use receiving accounts a number a currencies and get paid like a local Use receivin accounts a
-                    number paid the most
-                    beautiful think
+                    Witness how our nurturing environment and comprehensive programs empower every student to thrive and
+                    reach
+                    their full potential.
                 </div>
             </div>
             <div class="testimonial-innerbox">
@@ -2023,20 +2032,21 @@
                                                 </div>
                                                 <div class="cont">
                                                     <h4 class="black mb-1">
-                                                        Alex smith
+                                                        <!-- Alex smith -->
                                                     </h4>
                                                     <span class="black fw-normal">
-                                                        Marketing manager
+                                                        <!-- Marketing manager -->
                                                     </span>
                                                 </div>
                                             </div>
                                             <img src="assets/img/atestimonial/quote.png" alt="img" class="quote-testi">
                                         </div>
                                         <p class="pra mt-24 mb-40">
-                                            Their product exceeded his my routi expectations. The the quality and
-                                            attention to detail a the a
-                                            most outstanding and
-                                            it has become an essential most a education the man who can do
+                                            "Sending our child to Krishna Public School was the best decision. The
+                                            school genuinely focuses on holistic development, not just academics. Our
+                                            child has become so much more confident and engaged, both in studies and
+                                            extracurriculars.
+                                            The teachers are incredibly supportive!"
                                         </p>
                                         <div class="ratting-area d-flex align-items-center gap-2">
                                             <i class="fas fa-star"></i>
@@ -2047,6 +2057,101 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                     <div class="swiper-slide">
+                                    <div class="testimonial-item01">
+                                        <div class="d-flex align-items-center justify-content-between gap-1">
+                                            <div class="man-info d-flex align-items-center">
+                                                <div class="thumb">
+                                                    <img src="assets/img/atestimonial/testimonial-small.png" alt="">
+                                                </div>
+                                                <div class="cont">
+                                                    <h4 class="black mb-1">
+                                                        <!-- Alex smith -->
+                                                    </h4>
+                                                    <span class="black fw-normal">
+                                                        <!-- Marketing manager -->
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <img src="assets/img/atestimonial/quote.png" alt="img" class="quote-testi">
+                                        </div>
+                                        <p class="pra mt-24 mb-40">
+                                 "We are constantly amazed by the passion and dedication of the staff. The emphasis on creative learning truly helps children understand concepts, not just memorize them. Our child loves going to school, 
+                                 and as parents, that's incredibly reassuring."
+                                        </p>
+                                        <div class="ratting-area d-flex align-items-center gap-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <div class="swiper-slide">
+                                    <div class="testimonial-item01">
+                                        <div class="d-flex align-items-center justify-content-between gap-1">
+                                            <div class="man-info d-flex align-items-center">
+                                                <div class="thumb">
+                                                    <img src="assets/img/atestimonial/testimonial-small.png" alt="">
+                                                </div>
+                                                <div class="cont">
+                                                    <h4 class="black mb-1">
+                                                        <!-- Alex smith -->
+                                                    </h4>
+                                                    <span class="black fw-normal">
+                                                        <!-- Marketing manager -->
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <img src="assets/img/atestimonial/quote.png" alt="img" class="quote-testi">
+                                        </div>
+                                        <p class="pra mt-24 mb-40">
+                                  "This school provides a wonderful balance of academic rigor and diverse opportunities. From top-notch sports facilities to engaging cultural events, our child has found so many avenues to explore and excel. We've seen remarkable growth in their personality and skills." 
+                                        </p>
+                                        <div class="ratting-area d-flex align-items-center gap-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <div class="swiper-slide">
+                                    <div class="testimonial-item01">
+                                        <div class="d-flex align-items-center justify-content-between gap-1">
+                                            <div class="man-info d-flex align-items-center">
+                                                <div class="thumb">
+                                                    <img src="assets/img/atestimonial/testimonial-small.png" alt="">
+                                                </div>
+                                                <div class="cont">
+                                                    <h4 class="black mb-1">
+                                                        <!-- Alex smith -->
+                                                    </h4>
+                                                    <span class="black fw-normal">
+                                                        <!-- Marketing manager -->
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <img src="assets/img/atestimonial/quote.png" alt="img" class="quote-testi">
+                                        </div>
+                                        <p class="pra mt-24 mb-40">
+                                       "The nurturing environment here has made a significant difference for our child. They feel safe, supported, and truly seen by their teachers. We appreciate the school's commitment to building compassionate learners ready to thrive in a global world." 
+                                        </p>
+                                        <div class="ratting-area d-flex align-items-center gap-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -2174,10 +2279,12 @@
                             </div>
                             <div class="footer-content">
                                 <p class="pre-pragraph">
-                                 Empowering young minds every day with purpose, pride, and a passion for lifelong excellence, growth, and character.
+                                    Empowering young minds every day with purpose, pride, and a passion for lifelong
+                                    excellence, growth, and character.
                                 </p>
                                 <div class="social-wrapper d-flex align-items-center">
-                                    <a href=" https://www.facebook.com/KrishnaPublicSchool" class="white"><i class="white fab fa-facebook-f"></i></a>
+                                    <a href=" https://www.facebook.com/KrishnaPublicSchool" class="white"><i
+                                            class="white fab fa-facebook-f"></i></a>
                                     <!-- <a href="#" class="white">
                                         <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -2186,12 +2293,13 @@
                                                 fill="white" />
                                         </svg>
                                     </a> -->
-                                    <a href=" https://www.instagram.com/krishnapublicschool.bareilly/?hl=en" class="white">
-  <i class="white fa-brands fa-instagram"></i>
-</a>
-<a href="https://wa.me/9084762790" class="white" target="_blank">
-  <i class="white fa-brands fa-whatsapp"></i>
-</a>
+                                    <a href=" https://www.instagram.com/krishnapublicschool.bareilly/?hl=en"
+                                        class="white">
+                                        <i class="white fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://wa.me/9084762790" class="white" target="_blank">
+                                        <i class="white fa-brands fa-whatsapp"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -2209,17 +2317,17 @@
                                 </li>
                                 <li>
                                     <a href="academics.html">
-                                     Academics
+                                        Academics
                                     </a>
                                 </li>
                                 <li>
                                     <a href="school-calender.html">
-                                     School Calender
+                                        School Calender
                                     </a>
                                 </li>
                                 <li>
                                     <a href="event-gallery.html">
-                                     Event Gallery 
+                                        Event Gallery
                                     </a>
                                 </li>
                             </ul>
@@ -2234,12 +2342,14 @@
                                 <li>
                                     <i class="fa-solid fa-location-dot"></i>
                                     <span class="lited">
-                                       19th KM. Shahjahanpur Road, Adarsh Shiksha Gram, Near Faridpur, Bareilly, Uttar Pradesh, India 243001 
+                                        19th KM. Shahjahanpur Road, Adarsh Shiksha Gram, Near Faridpur, Bareilly, Uttar
+                                        Pradesh, India 243001
                                     </span>
                                 </li>
                                 <li>
                                     <i class="far fa-envelope"></i>
-                                    <a href="krishnapublicschool@gmail.com " class="link">krishnapublicschool@gmail.com </a>
+                                    <a href="krishnapublicschool@gmail.com " class="link">krishnapublicschool@gmail.com
+                                    </a>
                                 </li>
                                 <li>
                                     <i class="fa-solid fa-phone"></i>
@@ -2311,24 +2421,24 @@
     <script src="assets/js/main.js"></script>
 
     <!-- toppers - script -->
-<script>
-  const studentSlider = document.querySelector('.student-slider');
-  let studentIndex = 0;
-  const studentImageWidth = 216; // 200px + 16px gap
+    <script>
+        const studentSlider = document.querySelector('.student-slider');
+        let studentIndex = 0;
+        const studentImageWidth = 216; // 200px + 16px gap
 
-  function studentManualSlide(direction) {
-    const totalImages = studentSlider.children.length;
-    const visibleImages = window.innerWidth <= 768 ? 1 : 4;
-    const maxIndex = totalImages - visibleImages;
+        function studentManualSlide(direction) {
+            const totalImages = studentSlider.children.length;
+            const visibleImages = window.innerWidth <= 768 ? 1 : 4;
+            const maxIndex = totalImages - visibleImages;
 
-    studentIndex += direction;
-    if (studentIndex < 0) studentIndex = 0;
-    if (studentIndex > maxIndex) studentIndex = maxIndex;
+            studentIndex += direction;
+            if (studentIndex < 0) studentIndex = 0;
+            if (studentIndex > maxIndex) studentIndex = maxIndex;
 
-    studentSlider.style.animation = 'none'; // stop auto animation
-    studentSlider.style.transform = `translateX(-${studentIndex * studentImageWidth}px)`;
-  }
-</script>
+            studentSlider.style.animation = 'none'; // stop auto animation
+            studentSlider.style.transform = `translateX(-${studentIndex * studentImageWidth}px)`;
+        }
+    </script>
 </body>
 
 </html>
