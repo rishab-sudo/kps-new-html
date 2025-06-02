@@ -254,6 +254,81 @@
       }
     }
   </style>
+
+  <!-- custom alternative layout -->
+<style>
+    .custom-section {
+        margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.custom-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.custom-text,
+.custom-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.custom-text {
+  flex-direction: column;
+}
+
+.custom-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+    max-width: 500px;
+    margin-right: auto;
+}
+
+.custom-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 500px;
+  margin-right: auto;
+}
+
+.custom-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Large screen layout */
+@media (min-width: 768px) {
+  .custom-row {
+    flex-direction: row;
+    text-align: left;
+    min-width: 90%;
+  }
+
+  .custom-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .custom-text,
+  .custom-image {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+</style>
 <body>
 
     <!-- Preloader Start -->
@@ -595,8 +670,6 @@
   </div>
 </section>
 
-<!--  -->
-
 <!-- About-us sec-3 -->
  <section class="about-section">
   <h2>OUR COMPANY VALUES AND</h2>
@@ -648,6 +721,45 @@
   </div>
 </section>
  <!--  -->
+
+ <!-- custom alternative layout sec-4-->
+
+<section class="custom-section">
+  <!-- Row 1: Text | Image -->
+  <div class="custom-row">
+    <div class="custom-text">
+      <h2>Heading 1</h2>
+      <p>Description for the first row goes here. It's clear and concise.</p>
+    </div>
+    <div class="custom-image">
+      <img src="/assets/img/about/04.png" alt="Image 1" />
+    </div>
+  </div>
+
+
+  <div class="custom-row custom-row-reverse">
+    <div class="custom-text">
+      <h2>Heading 2</h2>
+      <p>Description for the second row goes here. Keep it informative.</p>
+    </div>
+    <div class="custom-image">
+      <img src="/assets/img/about/04.png" alt="Image 2" />
+    </div>
+  </div>
+
+
+  <div class="custom-row">
+    <div class="custom-text">
+      <h2>Heading 3</h2>
+      <p>Description for the third row goes here. Clear and impactful.</p>
+    </div>
+    <div class="custom-image">
+      <img src="/assets/img/about/04.png" alt="Image 3" />
+    </div>
+  </div>
+</section>
+
+<!--  -->
     <!-- Aboutv1 Section Start -->
     <section class="about-sectionv1 space-top overflow-hidden space-bottom">
         <div class="container">
