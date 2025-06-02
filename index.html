@@ -32,91 +32,65 @@
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .slider-container {
-      position: relative;
-      width: 100%;
-      max-width: 65%;
-      margin: 50px auto;
-      overflow: hidden;
-    margin-bottom: 5%;
-    }
-
- .slider-track {
-  display: flex;
-  gap: 10px; 
-  transition: transform 0.5s ease-in-out;
-
-}
-
-.slide {
-  flex: 0 0 calc((100% - 20px) / 4); 
-  height: 305px;
-  padding: 0;
-}
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .slider-buttons {
-      position: absolute;
-      top: 65%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
-
-    .slider-buttons button {
-      pointer-events: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 20px;
-      border-radius: 50%;
-    }
-
-    @media (max-width: 900px) {
-      .slide {
-        flex: 0 0 45%;
-      }
-    }
-
-  @media (max-width: 768px) {
-   .slide {
-    width: 100%;
-    flex: 0 0 100%; /* One image per view */
+<style>
+  .student-slider-section {
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px;
-    
+    background: #f2f2f2;
+    padding: 40px 0;
+    overflow: hidden;
   }
 
-  .slider-track {
-    width: 100%;
-    gap: 0; /* Remove gap so slide fits fully */
-    padding: 0px; /* Optional: adjust for alignment */
+  .student-slider-container {
+    width: 90%;
+    max-width: 900px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .student-slider-track {
+    display: flex;
+    width: max-content;
+    animation: student-infinite-scroll 30s linear infinite;
+  }
+
+  .student-slider {
+    display: flex;
+    gap: 16px;
+  }
+
+  .student-slider img {
+    height: 320px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  @keyframes student-infinite-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .student-slider-track {
+      animation-duration: 15s;
     }
 
+    .student-slider {
+      gap: 8px;
     }
-  </style>
+
+    .student-slider img {
+      width: 90vw;
+    }
+  }
+</style>
 <body>
 
     <!-- Preloader Start -->
@@ -661,28 +635,29 @@
 
 
     <!-- toppers sec -->
-      <div class="slider-container">
-     <div class="section-title text-center mb-60">
-                        <span class="sub-title wow fadeInUp p4-clr">
-                           
-                        </span>
-                        <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                      Our School Toppers
-                        </h3>
-                    </div>
-    <div class="slider-track" id="sliderTrack">
-      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 1"></div>
-      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 2"></div>
-      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 3"></div>
-      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 4"></div>
-      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 5"></div>
-      <div class="slide"><img src="assets/img/new-img/nora.jpg" alt="Image 6"></div>
-    </div>
-    <div class="slider-buttons">
-      <button onclick="moveSlide(-1)">&#10094;</button>
-      <button onclick="moveSlide(1)">&#10095;</button>
+<section class="student-slider-section">
+  <div class="student-slider-container">
+    <div class="student-slider-track">
+      <div class="student-slider">
+        <img src="./assets/img/new-img/nora.jpg" alt="1" />
+        <img src="./assets/img/new-img/nora.jpg" alt="2" />
+        <img src="./assets/img/new-img/nora.jpg" alt="3" />
+        <img src="./assets/img/new-img/nora.jpg" alt="4" />
+        <img src="./assets/img/new-img/nora.jpg" alt="5" />
+        <img src="./assets/img/new-img/nora.jpg" alt="6" />
+
+        <!-- Duplicated for infinite loop -->
+        <img src="./assets/img/new-img/nora.jpg" alt="1" />
+        <img src="./assets/img/new-img/nora.jpg" alt="2" />
+        <img src="./assets/img/new-img/nora.jpg" alt="3" />
+        <img src="./assets/img/new-img/nora.jpg" alt="4" />
+        <img src="./assets/img/new-img/nora.jpg" alt="5" />
+        <img src="./assets/img/new-img/nora.jpg"" alt="6" />
+      </div>
     </div>
   </div>
+</section>
+
 
     <!-- Protfolio Section Start -->
     <section class="protfolio-sectionv1 overflow-hidden space-bottom position-relative">
@@ -1927,30 +1902,24 @@
     <script src="assets/js/main.js"></script>
 
     <!-- toppers - script -->
-  <script>
-    const track = document.getElementById('sliderTrack');
-    const slides = document.querySelectorAll('.slide');
-    const slideWidth = slides[0].offsetWidth + 20; // includes margin-right
-    let index = 0;
-    const visibleSlides = 4;
+<script>
+  const studentSlider = document.querySelector('.student-slider');
+  let studentIndex = 0;
+  const studentImageWidth = 216; // 200px + 16px gap
 
-    function moveSlide(direction) {
-      index += direction;
+  function studentManualSlide(direction) {
+    const totalImages = studentSlider.children.length;
+    const visibleImages = window.innerWidth <= 768 ? 1 : 4;
+    const maxIndex = totalImages - visibleImages;
 
-      if (index < 0) {
-        index = slides.length - visibleSlides;
-      } else if (index > slides.length - visibleSlides) {
-        index = 0;
-      }
+    studentIndex += direction;
+    if (studentIndex < 0) studentIndex = 0;
+    if (studentIndex > maxIndex) studentIndex = maxIndex;
 
-      track.style.transform = `translateX(-${index * slideWidth}px)`;
-    }
-
-    // Auto slide every 3 seconds
-    setInterval(() => {
-      moveSlide(1);
-    }, 3000);
-  </script>
+    studentSlider.style.animation = 'none'; // stop auto animation
+    studentSlider.style.transform = `translateX(-${studentIndex * studentImageWidth}px)`;
+  }
+</script>
 </body>
 
 </html>
