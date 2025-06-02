@@ -96,16 +96,29 @@
   </div>
 
   <script>
+    const firstNames = ["Anita", "Rahul", "Meena", "Vikram", "Priya", "Sahil", "Neha", "Ravi", "Ayesha", "Kunal"];
+    const lastNames = ["Sharma", "Verma", "Yadav", "Patel", "Khan", "Singh", "Das", "Reddy", "Gupta", "Chopra"];
+    const statuses = ["Active", "On Leave", "Retired", "Pending", "Visiting"];
+
+    const getRandom = arr => arr[Math.floor(Math.random() * arr.length)];
+
     const tbody = document.querySelector("tbody");
-    tbody.innerHTML = Array.from({ length: 30 }, (_, i) => `
-      <tr>
-        <td>${i + 1}</td>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john${i + 1}@mail.com</td>
-        <td>${i % 2 === 0 ? 'Active' : 'Pending'}</td>
-      </tr>
-    `).join('');
+    tbody.innerHTML = Array.from({ length: 30 }, (_, i) => {
+      const first = getRandom(firstNames);
+      const last = getRandom(lastNames);
+      const email = `${first.toLowerCase()}.${last.toLowerCase()}${i + 1}@university.edu`;
+      const status = getRandom(statuses);
+
+      return `
+        <tr>
+          <td>${i + 1}</td>
+          <td>${first}</td>
+          <td>${last}</td>
+          <td>${email}</td>
+          <td>${status}</td>
+        </tr>
+      `;
+    }).join('');
   </script>
 
 </body>
