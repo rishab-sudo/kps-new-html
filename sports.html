@@ -3,160 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>3D Coverflow Slider</title>
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
+  <title>3D Looping Image Carousel</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
       padding: 0;
-    }
-
-    body {
-      font-family: sans-serif;
       background: #f0f0f0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-    }
-
-    /* Text Section */
-    .text-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-bottom: 4rem;
-      max-width: 1000px;
-      width: 100%;
-    }
-
-    .text-left, .text-right {
-      flex: 1 1 300px;
-    }
-
-    .text-left h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .text-left p, .text-right p {
-      font-size: 1rem;
-      color: #333;
-    }
-
-    /* Swiper Slider Section */
-    .swiper-container {
-      width: 100%;
-      max-width: 1000px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-
-    .swiper-slide {
-      width: 200px !important;
-      height: 250px !important;
+      font-family: sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      min-height: 100vh;
     }
 
-    .swiper-slide img {
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      height: 300px;
+      perspective: 1200px;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-item {
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      width: 200px;
+      height: 250px;
+      margin-left: -100px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.8s ease, opacity 0.8s ease, z-index 0.8s ease;
+      opacity: 0.6;
+      transform-style: preserve-3d;
+    }
+
+    .carousel-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    @media (max-width: 768px) {
-      .text-section {
-        flex-direction: column;
-        text-align: center;
-      }
-      .swiper-slide {
-        width: 160px !important;
-        height: 200px !important;
-      }
+    .center {
+      transform: translateX(0) scale(1.2);
+      z-index: 5;
+      opacity: 1;
+    }
+
+    .left1 {
+      transform: translateX(-220px) rotateY(30deg);
+      z-index: 4;
+    }
+
+    .left2 {
+      transform: translateX(-440px) rotateY(50deg);
+      z-index: 3;
+    }
+
+    .right1 {
+      transform: translateX(220px) rotateY(-30deg);
+      z-index: 4;
+    }
+
+    .right2 {
+      transform: translateX(440px) rotateY(-50deg);
+      z-index: 3;
     }
   </style>
 </head>
 <body>
 
-  <!-- Text Section -->
-  <div class="text-section">
-    <div class="text-left">
-      <h2>Welcome to the Future</h2>
-      <p>Experience innovation like never before. Our platform brings modern design and next-gen technology together.</p>
-    </div>
-    <div class="text-right">
-      <p>From immersive visuals to real-time performance, our 3D interface redefines user engagement and product storytelling.</p>
+  <div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-item left2"><img src="/assets/img/new-img/nora.jpg" /></div>
+      <div class="carousel-item left1"><img src="/assets/img/new-img/nora.jpg" /></div>
+      <div class="carousel-item center"><img src="/assets/img/new-img/nora.jpg" /></div>
+      <div class="carousel-item right1"><img src="/assets/img/new-img/nora.jpg" /></div>
+      <div class="carousel-item right2"><img src="/assets/img/new-img/nora.jpg" /></div>
     </div>
   </div>
 
-  <!-- 3D Swiper Coverflow Slider -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="/assets/img/new-img/nora.jpg" alt="Image 1"></div>
-      <div class="swiper-slide"><img src="/assets/img/new-img/nora.jpg" alt="Image 2"></div>
-      <div class="swiper-slide"><img src="/assets/img/new-img/nora.jpg" alt="Image 3"></div>
-      <div class="swiper-slide"><img src="/assets/img/new-img/nora.jpg" alt="Image 4"></div>
-      <div class="swiper-slide"><img src="/assets/img/new-img/nora.jpg" alt="Image 5"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <!-- Swiper Initialization -->
   <script>
-    const swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 5,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 120,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1.5
-        },
-        480: {
-          slidesPerView: 2
-        },
-        768: {
-          slidesPerView: 3
-        },
-        992: {
-          slidesPerView: 5
-        }
-      }
-    });
+    const positions = ['left2', 'left1', 'center', 'right1', 'right2'];
+    const items = document.querySelectorAll('.carousel-item');
+
+    const rotate = () => {
+      // rotate classes
+      const last = positions.pop();
+      positions.unshift(last);
+
+      // reapply new classes
+      items.forEach((item, i) => {
+        item.className = 'carousel-item ' + positions[i];
+      });
+    };
+
+    setInterval(rotate, 2500); // auto rotate
   </script>
+
 </body>
 </html>
