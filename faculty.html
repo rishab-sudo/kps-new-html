@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fancy Responsive Table</title>
+  <title>Employee Info Table</title>
   <style>
     body {
       margin: 0;
@@ -31,7 +31,7 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 600px;
+      min-width: 800px;
     }
 
     thead {
@@ -61,9 +61,13 @@
     }
 
     @media (max-width: 768px) {
-     .table-container {
-width: 95% !important;
+         body {
+      padding: 15px;
+      text-align: center;
     }
+      .table-container {
+        min-width: 100% !important;
+      }
       th, td {
         padding: 0.75rem;
         font-size: 0.85rem;
@@ -79,49 +83,69 @@ width: 95% !important;
 </head>
 <body>
 
-  <h2>Our Faculty Members</h2>
+  <h2>Employee Information Table</h2>
 
   <div class="table-container">
     <table>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Status</th>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Qualification</th>
+          <th>Experience</th>
         </tr>
       </thead>
-      <tbody>
-        <!-- Rows will be inserted by JavaScript -->
+      <tbody id="data-rows">
+        <!-- JavaScript will inject rows here -->
       </tbody>
     </table>
   </div>
 
   <script>
-    const firstNames = ["Anita", "Rahul", "Meena", "Vikram", "Priya", "Sahil", "Neha", "Ravi", "Ayesha", "Kunal"];
-    const lastNames = ["Sharma", "Verma", "Yadav", "Patel", "Khan", "Singh", "Das", "Reddy", "Gupta", "Chopra"];
-    const statuses = ["Active", "On Leave", "Retired", "Pending", "Visiting"];
+    const names = [
+      "MS. Shagufta Khan", "MR. Sanjay Srivastava", "Mrs. Manjulata Singh", "Mrs. Huma Siddiqui", "Mr. Abid Raza", "Mr. Imran Khan",
+      "Mr. Vimal Sharma", "Mrs. Anita Singh", "Mr. Indrajeet", "Mrs. Hemlata Kashyap", "Mr. Kapil Kochhar", "Mr. Faheem Ahmad",
+      "Mr. Ankit Yadav", "Mrs. Reenu Agarwal", "Mrs. Monika Agarwal", "Mrs. Suman Rawat", "Mrs. Geeta Devi", "Mrs Preety Yadav",
+      "Mr. Purvi Agarwal", "Mr. Irfan Qayam", "Mrs. Rekha Asthana", "MS. Shubhra Mishra", "Mr. Dharmendra Kumar", "Mrs. veena Suri",
+      "Mr. Farkhunda Masood", "Mr. Tahir Uddin", "Mr. Sachin Saxena", "Ms. Vardha Khan", "Mrs. Vinita Singh", "Mr. Shwet Panday"
+    ];
 
-    const getRandom = arr => arr[Math.floor(Math.random() * arr.length)];
+    const designations = [
+      "Principal", "Vice Principal", "PGT", "PGT", "PGT", "PGT",
+      "PGT", "PGT", "PGT", "PGT", "TGT", "TGT",
+      "TGT", "TGT", "TGT", "PRT", "PRT", "PRT",
+      "PRT", "PRT", "PRT", "PRT", "PRT", "PRT",
+      "PRT", "PRT", "PRT", "PRT", "PRT", "Dance Teacher"
+    ];
 
-    const tbody = document.querySelector("tbody");
-    tbody.innerHTML = Array.from({ length: 30 }, (_, i) => {
-      const first = getRandom(firstNames);
-      const last = getRandom(lastNames);
-      const email = `${first.toLowerCase()}.${last.toLowerCase()}${i + 1}@university.edu`;
-      const status = getRandom(statuses);
+    const qualifications = [
+      "MA (English), B.Ed.", "M.Sc. (Chem.), MA (English), B.Ed.", "MA (Hindi), B.Ed.", "M.Sc. (Zoology), B.Ed., PGDCA, DBT", "MA (Maths), B.Ed.", "M.Sc. (Physics), B.Ed.",
+      "M.COM., B.Ed.", "MA (Eco), B.Ed.", "M.P.Ed.", "MCA, D.El.Ed.", "M.Sc. (Maths), B.Ed.", "M.Sc. (Maths), B.Ed.",
+      "M.Sc. (Zoology), B.Ed., MA (Public Relation), PGDM", "MA (Sociology), B.Ed.", "MA (English), B.Ed.", "MA (Eco), D.El.ED.", "MA (Sociology), NTT", "MA, B.Ed.",
+      "BA, B.Ed.", "M.Sc., D.El.Ed", "MA, B.Ed.", "D.El.Ed., NTT", "B.Sc, B.Ed.", "MA (Hindi), B.Ed.",
+      "MA, BTC", "MA, B.Ed.", "B.Sc., D.El.Ed", "MA", "MA, B.Ed.", "MA"
+    ];
 
-      return `
-        <tr>
-          <td>${i + 1}</td>
-          <td>${first}</td>
-          <td>${last}</td>
-          <td>${email}</td>
-          <td>${status}</td>
-        </tr>
-      `;
-    }).join('');
+    const experiences = [
+      "20 Yrs.", "20 Yrs.", "14 Yrs.", "14 Yrs.", "10 Yrs.", "06 Yrs.",
+      "12 Yrs.", "10 Yrs.", "12 Yrs.", "06 Yrs.", "08 Yrs.", "08 Yrs.",
+      "07 Yrs.", "30 Yrs.", "12 Yrs.", "10 Yrs.", "15 Yrs.", "07 Yrs.",
+      "03 Yrs.", "08 Yrs.", "12 Yrs.", "04 Yrs.", "07 Yrs.", "05 Yrs.",
+      "04 Yrs.", "06 Yrs.", "10 Yrs.", "04 Yrs.", "10 Yrs.", "10 Yrs."
+    ];
+
+    const tbody = document.getElementById("data-rows");
+
+    tbody.innerHTML = names.map((name, i) => `
+      <tr>
+        <td>${i + 1}</td>
+        <td>${name}</td>
+        <td>${designations[i]}</td>
+        <td>${qualifications[i]}</td>
+        <td>${experiences[i]}</td>
+      </tr>
+    `).join('');
   </script>
 
 </body>
