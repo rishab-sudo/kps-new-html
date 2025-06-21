@@ -94,6 +94,7 @@ Version: 1.0.0
 .theme-btn.transparent:hover {
   color: var(--white);
 }
+
 @media (max-width: 767px) {
   .theme-btn.transparent {
     padding: 18px 32px;
