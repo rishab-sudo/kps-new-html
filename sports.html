@@ -16,12 +16,18 @@
       min-height: 100vh;
     }
 
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
     .carousel {
       position: relative;
       width: 100%;
-      max-width: 1000px;
-      height: 300px;
-      perspective: 1200px;
+      height: 500px;
+      perspective: 2000px;
       overflow: hidden;
     }
 
@@ -33,17 +39,18 @@
 
     .carousel-item {
       position: absolute;
-      top: 25px;
+      top: 0;
       left: 50%;
-      width: 200px;
-      height: 250px;
-      margin-left: -100px;
+      width: 300px;
+      height: 400px;
+      margin-left: -150px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      transition: transform 0.8s ease, opacity 0.8s ease, z-index 0.8s ease;
-      opacity: 0.6;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0.9;
       transform-style: preserve-3d;
+      backface-visibility: hidden;
     }
 
     .carousel-item img {
@@ -54,60 +61,113 @@
 
     .center {
       transform: translateX(0) scale(1.2);
+      top: 50px;
       z-index: 5;
       opacity: 1;
     }
 
     .left1 {
-      transform: translateX(-220px) rotateY(30deg);
+      transform: translateX(-300px) rotateY(50deg);
+      top: 30px;
       z-index: 4;
     }
 
     .left2 {
-      transform: translateX(-440px) rotateY(50deg);
+      transform: translateX(-600px) rotateY(50deg);
+      top: 20px;
       z-index: 3;
+      opacity: 0;
+      visibility: hidden;
     }
 
     .right1 {
-      transform: translateX(220px) rotateY(-30deg);
+      transform: translateX(300px) rotateY(-50deg);
+      top: 30px;
       z-index: 4;
     }
 
     .right2 {
-      transform: translateX(440px) rotateY(-50deg);
+      transform: translateX(600px) rotateY(-50deg);
+      top: 20px;
       z-index: 3;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .carousel {
+        height: 400px;
+      }
+      
+      .carousel-item {
+        width: 240px;
+        height: 320px;
+        margin-left: -120px;
+      }
+
+      .left1 {
+        transform: translateX(-240px) rotateY(50deg);
+      }
+
+      .left2 {
+        transform: translateX(-480px) rotateY(50deg);
+      }
+
+      .right1 {
+        transform: translateX(240px) rotateY(-50deg);
+      }
+
+      .right2 {
+        transform: translateX(480px) rotateY(-50deg);
+      }
     }
   </style>
 </head>
 <body>
-
-  <div class="carousel">
-    <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-item left2"><img src="/assets/img/new-img/nora.jpg" /></div>
-      <div class="carousel-item left1"><img src="/assets/img/new-img/nora.jpg" /></div>
-      <div class="carousel-item center"><img src="/assets/img/new-img/nora.jpg" /></div>
-      <div class="carousel-item right1"><img src="/assets/img/new-img/nora.jpg" /></div>
-      <div class="carousel-item right2"><img src="/assets/img/new-img/nora.jpg" /></div>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-item left2"><img src="/assets/img/new-img/nora.jpg" /></div>
+        <div class="carousel-item left1"><img src="/assets/img/new-img/nora.jpg" /></div>
+        <div class="carousel-item center"><img src="/assets/img/new-img/nora.jpg" /></div>
+        <div class="carousel-item right1"><img src="/assets/img/new-img/nora.jpg" /></div>
+        <div class="carousel-item right2"><img src="/assets/img/new-img/nora.jpg" /></div>
+      </div>
     </div>
   </div>
 
   <script>
     const positions = ['left2', 'left1', 'center', 'right1', 'right2'];
     const items = document.querySelectorAll('.carousel-item');
+    let currentIndex = 2; // Start with center image
 
     const rotate = () => {
-      // rotate classes
-      const last = positions.pop();
-      positions.unshift(last);
-
-      // reapply new classes
+      // Move the last item to the beginning
+      const lastItem = items[items.length - 1];
+      const lastPosition = positions[positions.length - 1];
+      
+      // Update positions array
+      positions.pop();
+      positions.unshift(lastPosition);
+      
+      // Apply new positions
       items.forEach((item, i) => {
-        item.className = 'carousel-item ' + positions[i];
+        const position = positions[i];
+        item.className = 'carousel-item ' + position;
+        
+        // Hide items that are moving to back positions
+        if (position === 'left2' || position === 'right2') {
+          item.style.opacity = '0';
+          item.style.visibility = 'hidden';
+        } else {
+          item.style.opacity = '';
+          item.style.visibility = '';
+        }
       });
     };
 
-    setInterval(rotate, 2500); // auto rotate
+    // Auto-play
+    setInterval(rotate, 2000);
   </script>
-
 </body>
 </html>
