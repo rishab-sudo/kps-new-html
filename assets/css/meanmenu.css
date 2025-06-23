@@ -6,6 +6,13 @@
 	To be used with jquery.meanmenu.js by Chris Wharton (http://www.author.com/plugins/meanmenu/)
 
 ####################################################################### */
+/* pdf-pages css */
+.tp-banner-container{
+    margin-top: 3.5%;
+    margin-bottom: 5%;
+
+}
+/*  */
 /* footer -new */
 .opening-hours {
   list-style: none;
