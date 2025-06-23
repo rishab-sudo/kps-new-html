@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--<< Header Area >>-->
+
 <head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="UTF-8">
@@ -8,7 +10,7 @@
     <meta name="author" content="mugli">
     <meta name="description" content="Ascent - Kids Kindergarden School HTML Template">
     <!-- ======== Page title ============ -->
-    <title>Ascent - Chindcare & Kids School HTML Template</title>
+    <title>Ascent - Kids Kindergarden School HTML Template</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/faveicon.png">
     <!--<< Bootstrap min.css >>-->
@@ -29,96 +31,100 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
-
-  <style>
-
-    .section {
-      margin-bottom: 50px;
-      padding: 20px 0px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    /* Section 1 */
-    .section1 {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 5rem;
-      margin-top: 5%;
-    }
-    .section1 img {
-      max-width: 100%;
-      height: auto;
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .section1-content {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .section1-content p {
-      font-size: 16px;
-    }
-
-    /* Section 2 */
-    .section2 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
-
-    .box {
-      flex: 1;
-      min-width: 280px;
-      background: #e9f5ff7c;
-      padding:  20px;
-      height: 320px;
-      border-radius: 8px;
-    }
-
-    .box h3 {
-      margin-bottom: 10px;
-     color: #000;
-    }
-
-    .box ul {
-          list-style: disc;
-      padding-left: 20px;
-      font-size: 20px;
-    }
-
-    /* Section 3 */
-    .section3 h3 {
-      margin-bottom: 15px;
-    color: #000;
-    }
-
-    .section3 ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .section1 {
-        flex-direction: column;
-      }
-
-      .section2 {
-        flex-direction: column;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <span></span>
+        <span></span>
+        <span class="man-pre">
+            <img src="assets/img/aservices/sertd-shape.png" alt="img">
+        </span>
+    </div>
 
-        <!-- Header Section Start -->
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/logo.png" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">6391 Elgin St. Celina, 10299</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@example.com"><span
+                                            class="mailto:info@example.com">info@example.com</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Mod-friday, 06am -02pm</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+11002345909">(629) 555-0129</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                            <a href="contact.html" class="theme-btn p2-bg text-center">
+                                <span>
+                                    Get A Quote
+                                    <span class="ani-arrow">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+
+
+
+    <!-- Header Section Start -->
       <!-- Header Section Start -->
     <header id="header-sticky" class="header-1 white-bg">
        <div class="container-fluid" style=" width: 95%;">
@@ -244,56 +250,107 @@
             </div>
         </div>
     </header>
-  <!-- Section 1 -->
-  <div class=" container section section1">
-    <img src="./assets/img/abanner/railbow.png" alt="Admission Image" />
-    <div class="section1-content">
-         <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                          Welcome to Our School
-                        </h3>
-    <br>
-      <p>
-      Join our vibrant learning community where academic excellence meets personal growth. Admissions open from PNC to VIII and for Classes IX & XI. Registration begins in January. 
-      <br>Let’s shape confident, curious learners for a brighter tomorrow, together.
-Because every child deserves a future full of possibilities.
-      </p>
-    </div>
-  </div>
 
-  <!-- Section 2 -->
-  <div class="section section2">
-    <div class="box">
-      <h3>Admission Procedure</h3>
-      <ul>
-        <li>Fill the online application form</li>
-        <li>Submit the necessary documents</li>
-        <li>Attend the orientation session</li>
-        <li>Pay the admission fee</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Age Eligibility</h3>
-      <ul>
-        <li>Nursery: 3+ years</li>
-        <li>LKG: 4+ years</li>
-        <li>UKG: 5+ years</li>
-        <li>Class 1: 6+ years</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- Section 3 -->
-  <div class="section section3">
-    <h3>Required Documents</h3>
-    <ul>
-      <li>Birth Certificate</li>
-      <li>Aadhar Card of Student</li>
-      <li>Passport size photographs</li>
-      <li>Previous School Report Card (if any)</li>
-      <li>Address Proof</li>
-    </ul>
-  </div>
+    <!-- Search Area Start -->
+    <div class="search-wrap">
+        <div class="search-inner">
+            <i class="fas fa-times search-close" id="search-close"></i>
+            <div class="search-cell">
+                <form method="get">
+                    <div class="search-field-holder">
+                        <input type="search" class="main-search-input" placeholder="Search...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
+    <!-- Breadcrumnd Banner Start -->
+    <section class="breadcrumnd-banner cmn-bg overflow-hidden">
+        <div class="container">
+            <div class="breadcrumnd-wrapper">
+                <div class="breadcrumnd-content">
+                    <h1 class="black mb-lg-4 mb-md-3 mb-2">
+                        Contact Us
+                    </h1>
+                    <ul class="bread-list d-flex align-items-center gap-lg-4 gap-md-3 gap-2">
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            Contact Us
+                        </li>
+                    </ul>
+                </div>
+                <div class="breadcrumnd-thumb position-relative">
+                    <img src="assets/img/abanner/bread-thumb.png" alt="img" class="mimg">
+                    <img src="assets/img/abanner/bread-child.png" alt="img" class="bread-child">
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumnd Banner Start -->
+
+<div class="tp-banner-container">
+
+        <center>
+            <object data="/assets/pdf/Affiliation Letter.pdf" type="application/pdf" width="800px" height="2100px" class="responsive">
+                <p>
+                    Your web browser doesn't have a PDF plugin.
+                    Instead you can <a href="pdf/Affiliation%20Letter.pdf">
+                        click here to
+                        download the PDF file.
+                    </a>
+                </p>
+            </object>
+        </center>
+    </div>
+
+
+
+   <!-- Stay Success Section Start -->
+    <section class="stay-section pt-50 pb-50 cmn-bg overflow-hidden position-relative">
+        <div class="container">
+            <div class="row justify-content-between align-items-center g-4">
+                <div class="col-lg-5 col-md-6 col-sm-7">
+                    <div class="stay-content">
+                        <div class="section-title">
+                            <span class="sub-title wow fadeInUp black">
+                                Stay With Us
+                            </span>
+                            <h3 class="m-title wow fadeInUp black mb-sm-3 mb-2" data-wow-delay=".3s">
+                                The path to success starts with education
+                            </h3>
+                            <p class="mb-24 pra wow fadeInUp" data-wow-delay=".4s">
+                                Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem.
+                                Imperdiet massa turpis sit proin
+                                metus volutpat.
+                            </p>
+                            <a href="contact.html" class="theme-btn round100 p2-bg py-3">
+                                <span class="white fw-medium">
+                                   Contact Us
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 me-xl-5 col-sm-5">
+                    <div class="stay-thumb w-100">
+                        <img src="assets/img/aservices/stay-thumb.png" alt="img" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Element-->
+        <img src="assets/img/aservices/stay-shape.png" alt="img" class="stay-element">
+    </section>
 
     <!--<< Footer Section Start >>-->
     <footer class="footer-section overflow-hidden position-relative footer-style1 white-bg">
@@ -453,4 +510,5 @@ Because every child deserves a future full of possibilities.
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

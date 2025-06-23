@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--<< Header Area >>-->
+
 <head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="UTF-8">
@@ -29,99 +31,146 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
-
-  <style>
-
-    .section {
-      margin-bottom: 50px;
-      padding: 20px 0px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    /* Section 1 */
-    .section1 {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 5rem;
-      margin-top: 5%;
-    }
-    .section1 img {
-      max-width: 100%;
-      height: auto;
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .section1-content {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .section1-content p {
-      font-size: 16px;
-    }
-
-    /* Section 2 */
-    .section2 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
-
-    .box {
-      flex: 1;
-      min-width: 280px;
-      background: #e9f5ff7c;
-      padding:  20px;
-      height: 320px;
-      border-radius: 8px;
-    }
-
-    .box h3 {
-      margin-bottom: 10px;
-     color: #000;
-    }
-
-    .box ul {
-          list-style: disc;
-      padding-left: 20px;
-      font-size: 20px;
-    }
-
-    /* Section 3 */
-    .section3 h3 {
-      margin-bottom: 15px;
-    color: #000;
-    }
-
-    .section3 ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .section1 {
-        flex-direction: column;
-      }
-
-      .section2 {
-        flex-direction: column;
-      }
-    }
-  </style>
 </head>
+    <style>
+  
+        .withdrawal-container {
+            margin: auto;
+            background-color: white;
+            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+            border-radius: 12px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .withdrawal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .withdrawal-header h1 {
+          color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+ .withdrawal-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .withdrawal-image img {
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+            border: 1px solid #e5e7eb;
+            object-fit: cover;
+        }
+
+        .withdrawal-section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .withdrawal-section h2 {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .withdrawal-section svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .withdrawal-section p {
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .withdrawal-blue {
+            background-color: #eff6ff;
+            border-color: #bfdbfe;
+            color: #1e40af;
+        }
+
+        .withdrawal-green {
+            background-color: #ecfdf5;
+            border-color: #bbf7d0;
+            color: #065f46;
+        }
+
+        .withdrawal-yellow {
+            background-color: #fefce8;
+            border-color: #fde68a;
+            color: #92400e;
+        }
+
+        .withdrawal-purple {
+            background-color: #f5f3ff;
+            border-color: #ddd6fe;
+            color: #6b21a8;
+        }
+
+        .withdrawal-red {
+            background-color: #fef2f2;
+            border-color: #fecaca;
+            color: #991b1b;
+        }
+
+        .withdrawal-note {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            padding: 20px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #374151;
+        }
+
+        .withdrawal-note h2 {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+
 <body>
 
-
-        <!-- Header Section Start -->
-      <!-- Header Section Start -->
+          <!-- Header Section Start -->
     <header id="header-sticky" class="header-1 white-bg">
-       <div class="container-fluid" style=" width: 95%;">
+     <div class="container-fluid" style=" width: 95%;">
             <div class="mega-menu-wrapper">
                 <div class="header-main style-2">
                     <div class="header-left">
@@ -244,56 +293,171 @@
             </div>
         </div>
     </header>
-  <!-- Section 1 -->
-  <div class=" container section section1">
-    <img src="./assets/img/abanner/railbow.png" alt="Admission Image" />
-    <div class="section1-content">
-         <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                          Welcome to Our School
+    <!--  -->
+        <!-- Breadcrumnd Banner Start -->
+    <section class="breadcrumnd-banner cmn-bg overflow-hidden">
+        <div class="container">
+            <div class="breadcrumnd-wrapper">
+                <div class="breadcrumnd-content">
+                    <h1 class="black mb-lg-4 mb-md-3 mb-2">
+                    Academics 
+                    </h1>
+                    <ul class="bread-list d-flex align-items-center gap-lg-4 gap-md-3 gap-2">
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                         Academics 
+                        </li>
+                    </ul>
+                </div>
+                <div class="breadcrumnd-thumb position-relative">
+                    <img src="assets/img/abanner/bread-thumb.png" alt="img" class="mimg">
+                    <img src="assets/img/abanner/bread-child.png" alt="img" class="bread-child">
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <div class="withdrawal-container">
+        <!--withdrwal section -->
+   <div class="section-title text-center mb-60" style="margin-top: 5%;">
+                        <span class="sub-title wow fadeInUp p4-clr">
+                            Educational Programs
+                        </span>
+                        <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
+                            MS Dhoni Cricket Academy: Building Champions for Tomorrow
                         </h3>
-    <br>
-      <p>
-      Join our vibrant learning community where academic excellence meets personal growth. Admissions open from PNC to VIII and for Classes IX & XI. Registration begins in January. 
-      <br>Let’s shape confident, curious learners for a brighter tomorrow, together.
-Because every child deserves a future full of possibilities.
-      </p>
-    </div>
-  </div>
+                    </div>
 
-  <!-- Section 2 -->
-  <div class="section section2">
-    <div class="box">
-      <h3>Admission Procedure</h3>
-      <ul>
-        <li>Fill the online application form</li>
-        <li>Submit the necessary documents</li>
-        <li>Attend the orientation session</li>
-        <li>Pay the admission fee</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Age Eligibility</h3>
-      <ul>
-        <li>Nursery: 3+ years</li>
-        <li>LKG: 4+ years</li>
-        <li>UKG: 5+ years</li>
-        <li>Class 1: 6+ years</li>
-      </ul>
-    </div>
-  </div>
+        <!-- Image Section -->
+        <div class="withdrawal-image">
+            <img src="http://googleusercontent.com/image_generation_content/0"
+                alt="Withdrawal Procedure Infographic"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x300/e2e8f0/64748b?text=Image+Not+Available';">
+        </div>
 
-  <!-- Section 3 -->
-  <div class="section section3">
-    <h3>Required Documents</h3>
-    <ul>
-      <li>Birth Certificate</li>
-      <li>Aadhar Card of Student</li>
-      <li>Passport size photographs</li>
-      <li>Previous School Report Card (if any)</li>
-      <li>Address Proof</li>
-    </ul>
-  </div>
+        <!-- Step 1 -->
+        <div class="withdrawal-section withdrawal-blue">
+            <h2>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                Written Application
+            </h2>
+            <p>Submit a written application to the school office at least <strong>one month prior</strong> to the intended date of withdrawal. The application must be signed by the parent or legal guardian.</p>
+        </div>
 
+        <!-- Step 2 -->
+        <div class="withdrawal-section withdrawal-green">
+            <h2>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 8h6m-5 0h.01M9 12h6m-5 0h.01M9 16h6m-5 0h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Clearance of Dues
+            </h2>
+            <p>All outstanding fees and dues must be settled before the Transfer Certificate (TC) is processed.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="withdrawal-section withdrawal-yellow">
+            <h2>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Submission of Documents
+            </h2>
+            <p>Please return the <strong>original fee receipt</strong> and the student’s <strong>school ID card</strong> at the time of application.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="withdrawal-section withdrawal-purple">
+            <h2>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.003 12.003 0 002.944 12c.035 1.556.474 3.048 1.256 4.385l8.138 8.138 8.138-8.138c.782-1.337 1.221-2.829 1.256-4.385a12.003 12.003 0 00-3.098-8.618z"></path>
+                </svg>
+                Principal’s Approval
+            </h2>
+            <p>The Transfer Certificate will be issued only after proper verification and formal approval by the Principal.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="withdrawal-section withdrawal-red">
+            <h2>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                Policy Compliance
+            </h2>
+            <p>The school reserves the right to withhold the TC if any part of the withdrawal process remains incomplete.</p>
+        </div>
+
+        <!-- Note -->
+        <div class="withdrawal-note">
+            <h2>
+                <!-- <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg> -->
+                Note:
+            </h2>
+            To avoid any inconvenience, we recommend parents plan the withdrawal process well in advance for a smooth transition.
+        </div>
+    </div>
+<!--  -->
+      <!-- Stay Success Section Start -->
+    <section class="stay-section pt-50 pb-50 cmn-bg overflow-hidden position-relative">
+        <div class="container">
+            <div class="row justify-content-between align-items-center g-4">
+                <div class="col-lg-5 col-md-6 col-sm-7">
+                    <div class="stay-content">
+                        <div class="section-title">
+                            <span class="sub-title wow fadeInUp black">
+                                Stay With Us
+                            </span>
+                            <h3 class="m-title wow fadeInUp black mb-sm-3 mb-2" data-wow-delay=".3s">
+                                The path to success starts with education
+                            </h3>
+                            <p class="mb-24 pra wow fadeInUp" data-wow-delay=".4s">
+                                Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem.
+                                Imperdiet massa turpis sit proin
+                                metus volutpat.
+                            </p>
+                            <a href="contact.html" class="theme-btn round100 p2-bg py-3">
+                                <span class="white fw-medium">
+                                   Contact Us
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 me-xl-5 col-sm-5">
+                    <div class="stay-thumb w-100">
+                        <img src="assets/img/aservices/stay-thumb.png" alt="img" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Element-->
+        <img src="assets/img/aservices/stay-shape.png" alt="img" class="stay-element">
+    </section>
 
     <!--<< Footer Section Start >>-->
     <footer class="footer-section overflow-hidden position-relative footer-style1 white-bg">
@@ -453,4 +617,5 @@ Because every child deserves a future full of possibilities.
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
