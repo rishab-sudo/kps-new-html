@@ -3483,7 +3483,8 @@ iframe {
   font-weight: 400;
 }
 .banner-1 .banner-v1-content h1 .text-sount {
-  color: var(--p3-clr);
+  /* color: var(--p3-clr); */
+  color: brown;
 }
 .banner-1 .banner-v1-content p {
   font-size: 16px;

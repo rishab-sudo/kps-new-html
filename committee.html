@@ -10,7 +10,7 @@
     <meta name="author" content="mugli">
     <meta name="description" content="Ascent - Kids Kindergarden School HTML Template">
     <!-- ======== Page title ============ -->
-    <title>Ascent - Chindcare & Kids School HTML Template</title>
+    <title>KPS</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/faveicon.png">
     <!--<< Bootstrap min.css >>-->
@@ -31,11 +31,87 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--  -->
+<style>
+  .table-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    font-weight: 600;
+  }
+
+  .table-heading {
+    font-size: 2vw;
+  }
+
+  thead {
+    background: linear-gradient(90deg, #667eea, #b5a9ab);
+    color: white;
+  }
+
+  th, td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  tbody tr:hover {
+    background: #f1f5ff;
+    transition: background 0.3s ease;
+  }
+
+  th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .table-container {
+      min-width: 100% !important;
+    }
+
+    .table-heading {
+      font-size: 18px;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    table {
+      font-size: 0.8rem;
+    }
+  }
+</style>
 </head>
 
 <body>
 
-    <!-- Preloader Start -->
+      <!-- Preloader Start -->
     <div id="preloader" class="preloader">
         <span></span>
         <span></span>
@@ -43,8 +119,7 @@
             <img src="assets/img/aservices/sertd-shape.png" alt="img">
         </span>
     </div>
-
-    <!-- Offcanvas Area Start -->
+      <!-- Offcanvas Area Start -->
     <div class="fix-area">
         <div class="offcanvas__info">
             <div class="offcanvas__wrapper">
@@ -122,10 +197,7 @@
     </div>
     <div class="offcanvas__overlay"></div>
 
- 
-
-    <!-- Header Section Start -->
-      <!-- Header Section Start -->
+          <!-- Header Section Start -->
     <header id="header-sticky" class="header-1 white-bg">
         <div class="container">
             <div class="mega-menu-wrapper">
@@ -157,7 +229,7 @@
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="committee.html">Meet the Committee</a></li>
+                                                <li><a href="academics.html">Meet the Committee</a></li>
                                                 <li><a href="campus-facilities.html">Campus Facilities</a></li>
                                      
                                             </ul>
@@ -251,8 +323,7 @@
         </div>
     </header>
 
-
-    <!-- Search Area Start -->
+        <!-- Search Area Start -->
     <div class="search-wrap">
         <div class="search-inner">
             <i class="fas fa-times search-close" id="search-close"></i>
@@ -266,13 +337,14 @@
         </div>
     </div>
 
-    <!-- Breadcrumnd Banner Start -->
+        <!-- Breadcrumnd Banner Start -->
     <section class="breadcrumnd-banner cmn-bg overflow-hidden">
         <div class="container">
             <div class="breadcrumnd-wrapper">
                 <div class="breadcrumnd-content">
                     <h1 class="black mb-lg-4 mb-md-3 mb-2">
-                    Academics 
+                    Meet the Committee
+
                     </h1>
                     <ul class="bread-list d-flex align-items-center gap-lg-4 gap-md-3 gap-2">
                         <li>
@@ -284,159 +356,47 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </li>
                         <li>
-                         Academics 
+                     Meet the Committee
+
                         </li>
                     </ul>
                 </div>
                 <div class="breadcrumnd-thumb position-relative">
                     <img src="assets/img/abanner/bread-thumb.png" alt="img" class="mimg">
                     <img src="assets/img/abanner/bread-child.png" alt="img" class="bread-child">
-                   
+                    <img src="assets/img/abanner/bread-cat.png" alt="img" class="bread-cat">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Breadcrumnd Banner Start -->
+    <!--  -->
+<!-- main content -->
+<div class="section-title" style="text-align: center; margin-top: 3.6%;">
+  <span class="sub-title wow fadeInUp p2-clr" style="margin-bottom: 0px; font-weight: 600;">
+    Meet the Committee
+  </span>
+  <h3 class="m-title wow fadeInUp black table-heading" data-wow-delay=".3s" style="margin-top: 15px;">
+    Where Experience Meets Excellence in Education
+    <br /><br />
+  </h3>
+</div>
 
-    <!-- Service Details Section Start -->
-    <section class="service-dtails overflow-hidden section-padding position-relative">
-        <div class="container">
-            <div class="details-thumb mb-30 w-100 wow fadeInUp" data-wow-delay=".2s">
-                <img src="assets/img/aservices/details-big1.png" alt="img" class="w-100 round10">
-            </div>
-            <div class="common-content-box mb-40 wow fadeInUp" data-wow-delay=".3s">
-                <h4 class="custom-title black mb-lg-3 mb-2">
-              Empowering Young Minds Through Excellence, Innovation, and Inclusion
-                </h4>
-                <p class="pra mb-30">
-KPS is a co-educational institution that nurtures students in a warm, inclusive, and intellectually rich environment. 
-We blend academic excellence with co-curricular activities, encouraging curiosity, creativity, and holistic growth. Affiliated to CBSE, our forward-thinking curriculum is led by passionate educators. With modern infrastructure and dynamic learning spaces, KPS equips students to thrive in academics and beyond. 
-Our alumni shine in top institutions across India and the globe.
-                </p>
-                <div class="d-flex justify-content-between mb-40">
-                    <ul>
-                        <li class="d-flex align-items-center gap-xl-3 gap-2 pra mb-2">
-                            <i class="fa-solid fa-chevron-right p5-clr"></i>
-                             A nurturing, inclusive environment that respects diversity and individuality.
-                        </li>
-                        <li class="d-flex align-items-center gap-xl-3 gap-2 pra">
-                            <i class="fa-solid fa-chevron-right p5-clr"></i>
-                           Strong academic foundations paired with innovative teaching methods.
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="d-flex align-items-center gap-xl-3 gap-2 pra mb-2">
-                            <i class="fa-solid fa-chevron-right p5-clr"></i>
-                         Opportunities for holistic growth through co-curricular and value-based learning.
-                        </li>
-                        <li class="d-flex align-items-center gap-xl-3 gap-2 pra">
-                            <i class="fa-solid fa-chevron-right p5-clr"></i>
-                         State-of-the-art infrastructure that supports dynamic, future-ready education.
-                        </li>
-                    </ul>
-                </div>
-                <div class="row justify-content-center g-xl-4 g-3 mb-60">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="details-thumb-middile w-100">
-                            <img src="assets/img/aservices/details-middle1.png" alt="img" class="w-100 round10">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="details-thumb-middile w-100">
-                            <img src="assets/img/aservices/details-middle2.png" alt="img" class="w-100 round10">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="details-thumb-middile w-100">
-                            <img src="assets/img/aservices/details-middle3.png" alt="img" class="w-100 round10">
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center g-xl-4 g-3 mb-40">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="details-class-info w-100">
-                            <div class="icon d-center">
-                                <img src="assets/img/aicon/car-icons1.png" alt="img">
-                            </div>
-                            <h4 class="black mb-xl-3 mb-2">
-                             Academic Support
-                            </h4>
-                            <p class="pra">
-                               Focused, personalized attention to help students achieve academic excellence
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="details-class-info w-100">
-                            <div class="icon d-center">
-                                <img src="assets/img/aservices/sertd1.png" alt="img">
-                            </div>
-                            <h4 class="black mb-xl-3 mb-2">
-                             Resource Centre
-                            </h4>
-                            <p class="pra">
-                              Access to reading materials, tools, and learning spaces for growth.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="details-class-info w-100">
-                            <div class="icon d-center">
-                                <img src="assets/img/aicon/car-icons5.png" alt="img">
-                            </div>
-                            <h4 class="black mb-xl-3 mb-2">
-                               Skill Development
-                            </h4>
-                            <p class="pra">
-                               Activities and programs designed to build confidence, communication, and creativity.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cont-box mb-30 wow fadeInUp" data-wow-delay=".4s">
-                <h4 class="black mb-lg-3 mb-2">
-               Well-Rounded Learning
-                </h4>
-                <p class="pra">
-               Our school offers a complete education. We help children grow in mind, body, and spirit through diverse activities. This prepares them for real life, 
-               building confident and capable individuals for tomorrow's challenges.
-                </p>
-            </div>
-            <div class="row align-items-center g-lg-4 g-3 wow fadeInUp" data-wow-delay=".5s">
-                <div class="col-lg-6 col-md-6">
-                    <div class="see-content">
-                        <ul class="d-grid gap-xl-4 gap-lg-2 gap-md-1">
-                            <li class="d-flex align-items-center gap-xl-3 gap-2 pra mb-2">
-                                <i class="fa-solid fa-angles-right p5-clr"></i>
-                               We focus on nurturing each child's mind, body, and character for complete growth.
-                            </li>
-                            <li class="d-flex align-items-center gap-xl-3 gap-2 pra mb-2">
-                                <i class="fa-solid fa-angles-right p5-clr"></i>
-                               Learning extends beyond textbooks to build practical skills and real-world understanding.
-                            </li>
-                            <li class="d-flex align-items-center gap-xl-3 gap-2 pra mb-2">
-                                <i class="fa-solid fa-angles-right p5-clr"></i>
-                               We foster creative thinking, critical thought, and strong problem-solving abilities.
-                            </li>
-                            <li class="d-flex align-items-center gap-xl-3 gap-2 pra mb-2">
-                                <i class="fa-solid fa-angles-right p5-clr"></i>
-                            Every student is prepared with confidence and adaptability for tomorrow's challenges.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="see-all-thumb w-100">
-                        <img src="assets/img/aservices/see-all.png" alt="img" class="w-100 round10">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stay Success Section Start -->
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Post</th>
+        <th>Profession</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody id="data-rows"></tbody>
+  </table>
+</div>
+<!--  -->
+      <!-- Stay Success Section Start -->
     <section class="stay-section pt-50 pb-50 cmn-bg overflow-hidden position-relative">
         <div class="container">
             <div class="row justify-content-between align-items-center g-4">
@@ -447,16 +407,17 @@ Our alumni shine in top institutions across India and the globe.
                               Your Child's Future Awaits
                             </span>
                             <h3 class="m-title wow fadeInUp black mb-sm-3 mb-2" data-wow-delay=".3s">
-                              Invest in their future. Empower their dreams.
+                               Invest in their future. Empower their dreams.
                             </h3>
                             <p class="mb-24 pra wow fadeInUp" data-wow-delay=".4s">
-                         Krishna Public School empowers every child to succeed. We blend rigorous academics with sports and culture, nurturing confident, compassionate leaders for tomorrow.
+                     Krishna Public School empowers every child to succeed. We blend rigorous academics with sports and culture, nurturing confident,
+                      compassionate leaders for tomorrow.
                             </p>
-                            <a href="contact.html" class="theme-btn round100 p2-bg py-3">
+                            <!-- <a href="contact.html" class="theme-btn round100 p2-bg py-3">
                                 <span class="white fw-medium">
                                     Read More
                                 </span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -471,7 +432,7 @@ Our alumni shine in top institutions across India and the globe.
         <img src="assets/img/aservices/stay-shape.png" alt="img" class="stay-element">
     </section>
 
-   <!--<< Footer Section Start >>-->
+    <!--<< Footer Section Start >>-->
     <footer class="footer-section overflow-hidden position-relative footer-style1 white-bg">
         <div class="footer-widgets-wrapper">
             <div class="container">
@@ -621,8 +582,8 @@ Our alumni shine in top institutions across India and the globe.
         <img src="assets/img/footer/f-cut.png" alt="img" class="footer-cut position-absolute">
         <!-- Element -->
     </footer>
-
-    <!--<< All JS Plugins >>-->
+    <!--  -->
+       <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!--<< Viewport Js >>-->
     <script src="assets/js/viewport.jquery.js"></script>
@@ -644,6 +605,99 @@ Our alumni shine in top institutions across India and the globe.
     <script src="assets/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
-</body>
+<script>
+  const members = [
+    {
+      name: "Shri Ashok Agarwal",
+      post: "President",
+      profession: "Chief Editor",
+      address: "Amar Ujala, Bareilly"
+    },
+    {
+      name: "Shri Kashi Nath Sharma",
+      post: "Vice President",
+      profession: "Bussiness",
+      address: "'Ramayan' 113. Civil Lines, Bareilly"
+    },
+    {
+      name: "Shri R.N Mehra",
+      post: "Member",
+      profession: "Advocate",
+      address: "Friends Colony, Bareilly"
+    },
+    {
+      name: "Prof. Nizamuddin Siddiquei",
+      post: "Member",
+      profession: "Economist",
+      address: "Old City, Bareilly"
+    },
+    {
+      name: "Prof. Kishan Agarwal",
+      post: "Member",
+      profession: "Ex. Principal <br> Maharaja Agarsen Degree College",
+      address: "Avas Vikas Civil Lines, Bareilly"
+    },
+    {
+      name: "Dr. Sushil Asthana",
+      post: "Member",
+      profession: "Advocate",
+      address: "Rampur Garden, Bareilly"
+    },
+    {
+      name: "Dr. Girirsh Chandra Agarwal",
+      post: "Member",
+      profession: "Child Specialist",
+      address: "Kalibari, Bareilly"
+    },
+    {
+      name: "Dr. Sushil Syria",
+      post: "Member",
+      profession: "Ex. Sports Officer",
+      address: "Bareilly College, Bareilly"
+    },
+    {
+      name: "Smt. Rita Sharma",
+      post: "Member",
+      profession: "Teacher",
+      address: "D>K> Inter College, Bareilly"
+    },
+    {
+      name: "Shri Bhagwan Shinghal",
+      post: "Member",
+      profession: "Bussiness",
+      address: "M/s Wax & Allied Products, Faridpur, Bareilly"
+    },
+    {
+      name: "Shri Rajesh Singh",
+      post: "Member",
+      profession: "Bussiness",
+      address: "Bareilly Gas Service, Bareilly"
+    },
+    {
+      name: "Shri Puneet Agarwal",
+      post: "Member",
+      profession: "Bussiness",
+      address: "M/s Ram Kr Agarwal Jewellers, Bareilly"
+    },
+    {
+      name: "Mr. Anoop Agarwal",
+      post: "Member",
+      profession: "Bussiness",
+      address: "M/s Agarwal Mini Rice Mill, Faridpur, Bareilly"
+    }
+  ];
 
+  const tbody = document.getElementById("data-rows");
+  tbody.innerHTML = members.map((member, index) => `
+    <tr>
+      <td>${index + 1}</td>
+      <td>${member.name}</td>
+      <td>${member.post}</td>
+      <td>${member.profession}</td>
+      <td>${member.address}</td>
+    </tr>
+  `).join('');
+</script>
+
+</body>
 </html>
