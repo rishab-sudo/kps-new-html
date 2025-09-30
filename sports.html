@@ -76,140 +76,105 @@
     </style>
     <!--  -->
     <style>
-        .kps-carousel-container {
-            margin-top: 5%;
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            background-color: black;
-            margin: auto !important;
-            margin-top: 5% !important;
-            margin-bottom: 5% !important;
-        }
+     /* ===== Base layout ===== */
+.kps-carousel-container{
+  width:100%;
+  max-width:1200px;
+  margin:.5% auto 3.5rem;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+}
+.kps-carousel{
+  width:100%;
+  height:500px;
+  background-color: #ffffff;
+  perspective:2000px;
+  overflow:visible;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.kps-carousel-track{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  height:100%;
+}
+.kps-carousel-item{
+  width:300px;
+  height:375px;
+  object-fit: contain !important;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 7px 11px rgba(0,0,0,0.3);
+  transition:all 0.8s cubic-bezier(.4,0,.2,1);
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+  opacity:.9;
+  position:absolute;
+}
+.kps-carousel-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-        .kps-carousel {
-            width: 100%;
-            max-width: 100%;
-            height: 500px;
-            perspective: 2000px;
-            overflow: visible;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0;
-        }
-
-        .kps-carousel-track {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: auto;
-            height: 100%;
-            background-color: aqua;
-        }
-
-        .kps-carousel-item {
-            width: 300px;
-            height: 400px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
-            backface-visibility: hidden;
-            opacity: 0.9;
-            position: absolute !important;
-            background-color: aqua;
-        }
-
-        .kps-carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .center {
-            transform: scale(1.2);
-            top: 50px;
-            z-index: 5;
-            opacity: 1;
-            left: 50%;
-            transform: translateX(-50%) scale(1.2);
-            background-color: blanchedalmond;
-        }
-
-        .left1 {
-            transform: translateX(-300px) rotateY(50deg);
-            top: 30px;
-            z-index: 4;
-            left: 50%;
-            transform: translateX(calc(-50% - 300px)) rotateY(50deg);
-        }
-
-        .left2 {
-            transform: translateX(-600px) rotateY(50deg);
-            top: 20px;
-            z-index: 3;
-            opacity: 0;
-            visibility: hidden;
-            left: 50%;
-            transform: translateX(calc(-50% - 600px)) rotateY(50deg);
-        }
-
-        .right1 {
-            transform: translateX(300px) rotateY(-50deg);
-            top: 30px;
-            z-index: 4;
-            left: 50%;
-            transform: translateX(calc(-50% + 300px)) rotateY(-50deg);
-        }
-
-        .right2 {
-            transform: translateX(600px) rotateY(-50deg);
-            top: 20px;
-            z-index: 3;
-            opacity: 0;
-            visibility: hidden;
-            left: 50%;
-            transform: translateX(calc(-50% + 600px)) rotateY(-50deg);
-        }
-
-        @media (max-width: 768px) {
-            .kps-carousel-container {
-                max-width: 100% !important;
-               }
+/* ===== Desktop 3-D positions ===== */
+/* ===== Desktop 3-D positions ===== */
+.center {transform:translateX(-50%) scale(1.2); z-index:5;}
+.left1  {transform:translateX(calc(-50% - 320px)) scale(1.05) rotateY(50deg); z-index:4;}
+.left2  {transform:translateX(calc(-50% - 640px)) scale(0.9) rotateY(50deg); z-index:3; opacity:0; visibility:hidden;}
+.right1 {transform:translateX(calc(-50% + 320px)) scale(1.05) rotateY(-50deg); z-index:4;}
+.right2 {transform:translateX(calc(-50% + 640px)) scale(0.9) rotateY(-50deg); z-index:3; opacity:0; visibility:hidden;}
 
 
-            .kps-carousel {
-                max-width: 100%;
-                height: 400px;
+/* ===== 📱 Mobile (≤768 px) ===== */
+/* 📱 Mobile: show ONLY the center slide */
+@media (max-width:768px){
+  html,body{
+    overflow-x:hidden;
+  }
 
-            }
+  .kps-carousel-container{
+    width:95vw;          /* slider covers 95% of screen */
+    max-width:95vw;
+    margin:0 auto;
+    padding:0;
+  }
 
-            .kps-carousel-item {
-                width: 240px;
-                height: 320px;
-            }
+  .kps-carousel{
+    width:95vw;
+    height:400px;
+    overflow:hidden;
+  }
 
-            .left1 {
-                transform: translateX(calc(-50% - 240px)) rotateY(50deg);
-            }
+  .kps-carousel-item{
+    width:95vw;          /* center slide fills almost entire width */
+    height:320px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%); /* keep perfectly centered */
+  }
 
-            .left2 {
-                transform: translateX(calc(-50% - 480px)) rotateY(50deg);
-            }
+  /* hide every slide except the active center one */
+  .kps-carousel-item.left1,
+  .kps-carousel-item.left2,
+  .kps-carousel-item.right1,
+  .kps-carousel-item.right2{
+    display:none !important;
+  }
 
-            .right1 {
-                transform: translateX(calc(-50% + 240px)) rotateY(-50deg);
-            }
+  /* keep center slightly enlarged if you like */
+  .kps-carousel-item.center{
+    transform:translateX(-50%) scale(1);
+    z-index:5;
+  }
+}
 
-            .right2 {
-                transform: translateX(calc(-50% + 480px)) rotateY(-50deg);
-            }
-        }
+
+
     </style>
 </head>
 
@@ -221,7 +186,7 @@
         <span></span>
         <span></span>
         <span class="man-pre">
-            <img src="assets/img/aservices/sertd-shape.png" alt="img">
+             <img src="assets/img/kps/01.jpg" alt="img">
         </span>
     </div>
     <!-- Offcanvas Area Start -->
@@ -456,8 +421,8 @@
                     </ul>
                 </div>
                 <div class="breadcrumnd-thumb position-relative">
-                    <img src="assets/img/abanner/bread-thumb.png" alt="img" class="mimg">
-                    <img src="assets/img/abanner/bread-child.png" alt="img" class="bread-child">
+                    <img src="assets/img/kps/kbanner-1.png" alt="img" class="mimg">
+                    <img src="assets/img/kps/kbanner-2.png" alt="img" class="bread-child">
 
                 </div>
             </div>
@@ -465,7 +430,7 @@
     </section>
     <!--  -->
     <div class="container section section1">
-        <img src="./assets/img/abanner/railbow.png" alt="Admission Image" />
+        <img src="./assets/img/kps/ksport1.png" alt="Admission Image" />
         <div class="section1-content">
             <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
                 Active Minds, Active Bodies
@@ -490,17 +455,19 @@
             <br /><br />
         </h3>
     </div>
-    <div class="kps-carousel-container">
-        <div class="kps-carousel">
-            <div class="kps-carousel-track" id="kpsCarouselTrack">
-                <div class="kps-carousel-item" id="item1"><img src="/assets/img/new-img/nora.jpg" /></div>
-                <div class="kps-carousel-item" id="item2"><img src="/assets/img/new-img/nora.jpg" /></div>
-                <div class="kps-carousel-item" id="item3"><img src="/assets/img/new-img/nora.jpg" /></div>
-                <div class="kps-carousel-item" id="item4"><img src="/assets/img/new-img/nora.jpg" /></div>
-                <div class="kps-carousel-item" id="item5"><img src="/assets/img/new-img/nora.jpg" /></div>
-            </div>
-        </div>
+
+<div class="kps-carousel-container">
+  <div class="kps-carousel">
+    <div class="kps-carousel-track">
+      <div class="kps-carousel-item"><img src="./assets//img/kps/sport-slider/1.png" alt=""></div>
+      <div class="kps-carousel-item"><img src="./assets//img/kps/sport-slider/2.png" alt=""></div>
+      <div class="kps-carousel-item"><img src="./assets//img/kps/sport-slider/3.png" alt=""></div>
+      <div class="kps-carousel-item"><img src="./assets//img/kps/sport-slider/4.png" alt=""></div>
+      <div class="kps-carousel-item"><img src="./assets//img/kps/sport-slider/5.png" alt=""></div>
     </div>
+  </div>
+</div>
+
 
     <!-- Stay Success Section Start -->
     <section class="stay-section pt-50 pb-50 cmn-bg overflow-hidden position-relative">
@@ -530,7 +497,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 me-xl-5 col-sm-5">
                     <div class="stay-thumb w-100">
-                        <img src="assets/img/aservices/stay-thumb.png" alt="img" class="w-100">
+                      <img src="assets/img/kps/kchild-contact1.png" alt="img" class="w-100">
                     </div>
                 </div>
             </div>
@@ -698,59 +665,42 @@
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
     <!--  -->
-    <script>
-        const kpsPositions = ['left2', 'left1', 'center', 'right1', 'right2'];
-        const kpsItems = document.querySelectorAll('.kps-carousel-item');
+<script>
+const kpsItems = document.querySelectorAll('.kps-carousel-item');
+let current = 0;
 
-        const applyPositions = () => {
-            kpsItems.forEach((item, i) => {
-                if (window.innerWidth <= 768) { // Mobile adjustments
-                    if (kpsPositions[i] === 'left2') {
-                        item.style.transform = 'translateX(calc(-50% - 480px)) rotateY(50deg)';
-                    } else if (kpsPositions[i] === 'left1') {
-                        item.style.transform = 'translateX(calc(-50% - 240px)) rotateY(50deg)';
-                    } else if (kpsPositions[i] === 'center') {
-                        item.style.transform = 'translateX(-50%) scale(1.2)';
-                    } else if (kpsPositions[i] === 'right1') {
-                        item.style.transform = 'translateX(calc(-50% + 240px)) rotateY(-50deg)';
-                    } else if (kpsPositions[i] === 'right2') {
-                        item.style.transform = 'translateX(calc(-50% + 480px)) rotateY(-50deg)';
-                    }
-                } else { // Desktop adjustments
-                    if (kpsPositions[i] === 'left2') {
-                        item.style.transform = 'translateX(calc(-50% - 600px)) rotateY(50deg)';
-                    } else if (kpsPositions[i] === 'left1') {
-                        item.style.transform = 'translateX(calc(-50% - 300px)) rotateY(50deg)';
-                    } else if (kpsPositions[i] === 'center') {
-                        item.style.transform = 'translateX(-50%) scale(1.2)';
-                    } else if (kpsPositions[i] === 'right1') {
-                        item.style.transform = 'translateX(calc(-50% + 300px)) rotateY(-50deg)';
-                    } else if (kpsPositions[i] === 'right2') {
-                        item.style.transform = 'translateX(calc(-50% + 600px)) rotateY(-50deg)';
-                    }
-                }
+function showSlide(index){
+  kpsItems.forEach((item,i)=>{
+    item.classList.remove('active','center','left1','left2','right1','right2');
+    // On desktop we still keep your original positions
+    if(window.innerWidth > 768){
+      // original 3-D logic
+      const positions = ['left2','left1','center','right1','right2'];
+      item.classList.add('kps-carousel-item', positions[(i - index + kpsItems.length) % kpsItems.length]);
+      item.style.left = '50%';
+    }
+  });
 
-                item.style.left = '50%';
-                if (kpsPositions[i] === 'left2' || kpsPositions[i] === 'right2') {
-                    item.style.opacity = '0';
-                    item.style.visibility = 'hidden';
-                } else {
-                    item.style.opacity = '1';
-                    item.style.visibility = 'visible';
-                }
-            });
-        };
+  // Mobile: fade active only
+  if(window.innerWidth <= 768){
+    kpsItems[index].classList.add('active');
+  }
+}
 
-        const kpsRotate = () => {
-            kpsPositions.unshift(kpsPositions.pop()); // Rotate array
-            applyPositions();
-        };
+// rotate every 2s
+function nextSlide(){
+  current = (current + 1) % kpsItems.length;
+  showSlide(current);
+}
 
-        applyPositions(); // Initial load
-        setInterval(kpsRotate, 2000);
+showSlide(current);
+setInterval(nextSlide, 2000);
+window.addEventListener('resize', ()=>showSlide(current));
+</script>
 
-        window.addEventListener('resize', applyPositions); // Adjust on resize
-    </script>
+
+
+
 
 </body>
 
