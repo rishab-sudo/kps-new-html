@@ -396,8 +396,8 @@ color: #d6a94d;
 }
 
 .cmn-bg {
-  background: var(--cmnbg);
-  /* background-color: #d6a94d; */
+  /* background: var(--cmnbg); */
+  background-color: #d6a84d6c;
 }
 
 .d-center {
@@ -744,7 +744,8 @@ color: #d6a94d;
   top: -20px;
 }
 .about-one-thumbs .about-one-grow .academy-box {
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+  background-color: #d6a84d6c;
   border-radius: 10px;
   padding: 21px 21px;
 }
@@ -1234,7 +1235,8 @@ background: rgba(214, 169, 77, 0.8);
   border-radius: 0 0 0 150px;
 }
 .about-thumb-innerv2 .thumb-left-cont .thumb-cont {
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+  background-color: #d6a84d6c;
   padding: 50px 20px;
   border-radius: 64px 64px 0 0;
   display: flex;
@@ -2289,7 +2291,8 @@ iframe {
   gap: 14px;
 }
 .footer-style1 .footer-content .social-wrapper a {
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+  background-color: #d6a94d;
 }
 .footer-style1 .footer-content .social-wrapper a i {
   color: var(--black);
@@ -2938,7 +2941,8 @@ color: #87544f;
 }
 
 .offcanvas__info {
-  background: var(--cmnbg) none repeat scroll 0 0;
+  /* background: var(--cmnbg) none repeat scroll 0 0; */
+  background-color: #d6a84d6c none repeat scroll 0 0;
   border-left: 2px solid var(--p2-clr);
   position: fixed;
   right: 0;
@@ -3464,7 +3468,8 @@ color: #87544f;
 }
 
 .banner-1 {
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+  background-color: #d6a84d6c;
   padding-top: 80px;
   height: 790px;
   z-index: 1;
@@ -4548,7 +4553,8 @@ color: #87544f;
   gap: 14px;
 }
 .blog-right-wrap .blog-profile .social-wrapper a {
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+  background-color: #d6a84d6c;
   transition: all 0.4s;
 }
 .blog-right-wrap .blog-profile .social-wrapper a i {
@@ -5152,7 +5158,8 @@ color: #87544f;
   content: "";
   width: 50%;
   height: 392px;
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+ background-color: #d6a84d6c;
   border-radius: 10px;
   z-index: -1;
 }
@@ -5342,7 +5349,8 @@ color: #87544f;
 .details-class-info {
   border-radius: 10px;
   padding: 30px;
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+  background-color: #d6a84d6c;
 }
 .details-class-info .icon {
   width: 88px;
@@ -5397,7 +5405,8 @@ color: #87544f;
   gap: 14px;
 }
 .professional-item .social-wrapper a {
-  background: var(--cmnbg);
+  /* background: var(--cmnbg); */
+  background-color: #d6a84d6c;
   transition: all 0.4s;
 }
 .professional-item .social-wrapper a i {
