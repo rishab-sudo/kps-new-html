@@ -11,13 +11,14 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --p1-clr: #0A6375;
-  --p2-clr: #F7941E;
-  --p3-clr: #ED145B;
-  --p4-clr: #73BE48;
-  --p5-clr: #1CBBB4;
+  --p1-clr: #89171a;
+/* --p2-clr: #F7941E; */
+   --p2-clr: #d6a94d;
+  --p3-clr: #89171a;
+  --p4-clr: #89171a;
+  --p5-clr: #d6a94d;
   --cmnbg: #FFF0E5;
-  --theme: #F39F5F;
+  --theme: #d6a94d;
   --theme2: #70A6B1;
   --header: #385469;
   --text: #5C707E;
@@ -375,7 +376,7 @@ span {
 }
 
 .p4-clr {
-color: #87544f;
+color: #d6a94d;
 }
 
 .p4-bg {
@@ -396,6 +397,7 @@ color: #87544f;
 
 .cmn-bg {
   background: var(--cmnbg);
+  /* background-color: #d6a94d; */
 }
 
 .d-center {
@@ -835,19 +837,19 @@ color: #87544f;
 }
 .program-item .content .readmore:hover {
   /* color: var(--p4-clr); */
- color: #87544f;
+ color: #d6a94d;
 }
 .program-item .content .readmore:hover i {
-color: #87544f;
+color: #d6a94d;
 }
 .program-item:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .program-item:hover .content h4 a {
-color: #87544f;
+color: #d6a94d;
 }
 .program-item:hover .icons {
-  background: #87544f;
+  background: #d6a94d;
 }
 .program-item:hover .icons img {
   filter: brightness(25);
@@ -918,7 +920,10 @@ color: #87544f;
   top: 50%;
   width: 92%;
   height: 88%;
-  background: rgba(247, 148, 30, 0.8);
+  /* background: rgba(247, 148, 30, 0.8); */
+/* background: rgba(0, 0, 0, 0.9); */
+/* background: #d6a94d; */
+background: rgba(214, 169, 77, 0.8);
   border-radius: 10px;
   transition: all 0.4s;
   visibility: hidden;
