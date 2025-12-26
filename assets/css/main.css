@@ -3075,12 +3075,21 @@ color: #87544f;
 }
 
 @media (max-width: 450px) {
+  .side-logo{
+  width: auto;
+  height: 100px;
+}
+
   .offcanvas__info {
     width: 300px;
     background-color:  #ffffff;
   }
 }
 @media (max-width: 575px) {
+    .side-logo{
+  width: auto;
+  height: 100px;
+}
   .offcanvas__wrapper {
     padding: 20px;
      background-color:  #ffffff;
