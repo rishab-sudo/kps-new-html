@@ -2829,6 +2829,7 @@ color: #87544f;
 .header-main .sidebar__toggle {
   cursor: pointer;
   font-size: 39px;
+
 }
 @media (max-width: 575px) {
   .header-main .sidebar__toggle {
@@ -2870,6 +2871,7 @@ color: #87544f;
 @media (max-width: 767px) {
   .header-1 .header-main .header-right {
     gap: 10px;
+  
   }
 }
 .header-1 .header-main .header-right .search-icon {
@@ -2914,6 +2916,8 @@ color: #87544f;
 
 .sidebar__toggle {
   cursor: pointer;
+
+
 }
 
 .sticky {
@@ -3073,11 +3077,13 @@ color: #87544f;
 @media (max-width: 450px) {
   .offcanvas__info {
     width: 300px;
+    background-color:  #ffffff;
   }
 }
 @media (max-width: 575px) {
   .offcanvas__wrapper {
     padding: 20px;
+     background-color:  #ffffff;
   }
 }
 ::-webkit-scrollbar {
@@ -3438,7 +3444,6 @@ color: #87544f;
   background-color: rgba(249, 37, 150, 0.15);
   color: #f92596;
 }
-
 .border-none {
   border: none !important;
 }
@@ -3470,6 +3475,7 @@ color: #87544f;
 .banner-1 {
   /* background: var(--cmnbg); */
   background-color: #d6a84d6c;
+  /* background: #fbf6ea; */
   padding-top: 80px;
   height: 790px;
   z-index: 1;
